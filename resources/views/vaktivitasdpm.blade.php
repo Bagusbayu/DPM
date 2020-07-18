@@ -9,16 +9,15 @@
                 </div>
             @endif
             <hr>
-            <a type="button" class="btn btn-primary" href="{{url('inputanggota')}}">Input</a>
+            <a type="button" class="btn btn-primary" href="{{url('inputaktivitas')}}">Input</a>
             <br><br>
             <table class = "table">
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama</th>
-                    <th>Jurusan</th>
-                    <th>Angkatan</th>
-                    <th>Pict</th>
+                    <th>Judul</th>
+                    <th>Deskripsi</th>
+                    <th>File</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -27,9 +26,8 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{$no++}}</td>
-                        <td>{{$datas->nama}}</td>
-                        <td>{{$datas->jurusan}}</td>
-                        <td>{{$datas->angkatan}}</td>
+                        <td>{{$datas->judul}}</td>
+                        <td>{{$datas->deskripsi}}</td>
                         <td><img src="{{ url('uploads/file/'.$datas->pict) }}" style="width: 150px; height: 150px;"></td>
                         <td>
                          <a href="{{ route('vanggota.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>

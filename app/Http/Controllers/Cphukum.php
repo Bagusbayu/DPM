@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
-use App\Manggota;
+use App\Mphukum;
 
-class Canggota extends Controller
+class Cphukum extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class Canggota extends Controller
     public function index()
     {
         $data = Manggota::all();
-        return view ('vanggota',compact('data'));
+        return view ('vphukum',compact('data'));
     }
 
     /**
@@ -27,7 +27,7 @@ class Canggota extends Controller
      */
     public function create()
     {
-        return view ('inputanggota');
+        return view ('inputphukum');
     }
 
     /**
@@ -38,20 +38,15 @@ class Canggota extends Controller
      */
     public function store(Request $request)
     {
-        /**$this->validate($request, [
-            'pict' => 'required',
-        ]); */
-        $data = new Manggota();
+        $data = new Mphukum();
         $data->nama = $request->nama;
-        $data->jurusan = $request->jurusan;
-        $data->angkatan = $request->angkatan;
         $file = $request->file('pict');
         $ext = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$ext;
         $file->move('uploads/file',$newName);
         $data->pict = $newName;
         $data->save();
-        return redirect()->route('vanggota.index')->with('alert-success','Data berhasil ditambahkan!');
+        return redirect()->route('vphukum.index')->with('alert-success','Data berhasil ditambahkan!');
     }
 
     /**
@@ -73,7 +68,8 @@ class Canggota extends Controller
      */
     public function edit($id)
     {
-         $data = Mvmdpm::where('id',$id)->get();
+        
+        $data = Mvmdpm::where('id',$id)->get();
         return view('vanggota',compact('data'));
     }
 
@@ -86,16 +82,13 @@ class Canggota extends Controller
      */
     public function update(Request $request, $id)
     {
-        //$data = Manggota::where('id',$id)->first();
-        $data = Manggota::findOrFail($id);
+        $data = Mphukum::findOrFail($id);
         if (empty($request->file('pict'))){
             $data->pict = $data->pict;
         }
         else{
             unlink('uploads/file/'.$data->pict); //menghapus file lama
             $data->nama = $request->nama;
-            $data->jurusan = $request->jurusan;
-            $data->angkatan = $request->angkatan;
             $file = $request->file('pict');
             $ext = $file->getClientOriginalExtension();
             $newName = rand(100000,1001238912).".".$ext;
@@ -103,7 +96,7 @@ class Canggota extends Controller
             $data->pict = $newName;
         }
         $data->save();
-        return redirect()->route('vanggota.index')->with('alert-success','Data berhasil diubah!');
+        return redirect()->route('vphukum.index')->with('alert-success','Data berhasil diubah!');
     }
 
     /**
