@@ -73,7 +73,7 @@ class Canggota extends Controller
      */
     public function edit($id)
     {
-         $data = Mvmdpm::where('id',$id)->get();
+         $data = Manggota::where('id',$id)->get();
         return view('vanggota',compact('data'));
     }
 

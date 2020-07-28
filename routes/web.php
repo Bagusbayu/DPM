@@ -37,3 +37,6 @@ Route::get('/inputvmdpm','Cvmdpm@create');
 
 Route::resource('vanggota','Canggota');
 Route::get('/inputanggota','Canggota@create');
+
+Route::resource('vaktivitasdpm','CAktivitas');
+Route::get('/inputaktivitas','CAktivitas@create');
