@@ -9,7 +9,7 @@
                 </div>
             @endif
             <hr>
-            <a type="button" class="btn btn-primary" href="{{url('inputanggota')}}">Input</a>
+            <a type="button" class="btn btn-primary" href="{{url('inputphukum')}}">Input</a>
             <br><br>
             <table class = "table">
                 <thead>
@@ -28,7 +28,7 @@
                         <td>{{$datas->nama}}</td>
                         <td><img src="{{ url('uploads/file/'.$datas->pict) }}" style="width: 150px; height: 150px;"></td>
                         <td>
-                         <a href="{{ route('vanggota.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
+                         <a href="{{ route('vphukum.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
                             <!-- <form action="{{ route('vanggota.destroy', $datas->id) }}" method="post">
                                 <a href="{{ route('vanggota.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a> |
                                 {{ csrf_field() }}

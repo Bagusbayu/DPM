@@ -46,6 +46,7 @@
                 <li><a href="/vmdpm">Visi Misi  DPM <span class="sr-only">(current)</span></a></li>
                 <li><a href="/vanggota">Anggota DPM<span class="sr-only">(current)</span></a></li>
                 <li><a href="/vaktivitasdpm">Aktivitas <span class="sr-only">(current)</span></a></li>
+                <li><a href="/vphukum">Produk Hukum <span class="sr-only">(current)</span></a></li>
                  <li><a href="/logout" class="btn btn-primary">Logout</a></li>
             </ul>
         </div>

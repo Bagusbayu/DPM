@@ -40,3 +40,6 @@ Route::get('/inputanggota','Canggota@create');
 
 Route::resource('vaktivitasdpm','CAktivitas');
 Route::get('/inputaktivitas','CAktivitas@create');
+
+Route::resource('vphukum','Cphukum');
+Route::get('/inputphukum','Cphukum@create');

@@ -12,7 +12,7 @@
                     </ul>
                 </div>
         @endif
-                <form role = "form" action="{{ route('vanggota.update', $data->id) }}" method="post" enctype="multipart/form-data">
+                <form role = "form" action="{{ route('vphukum.update', $data->id) }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
                     <div class = "form-group">
@@ -27,7 +27,7 @@
                         <input type = "file" id = "pict" name="pict">
                     </div>
                     <button type = "submit" class = "btn btn-default">Submit</button>
-                    <a type="reset" class="btn btn-md btn-danger" href="{{route('vanggota.index')}}">Cancel</a>
+                    <a type="reset" class="btn btn-md btn-danger" href="{{route('vphukum.index')}}">Cancel</a>
                 </form>
         </div>
 

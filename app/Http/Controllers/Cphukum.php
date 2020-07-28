@@ -16,7 +16,7 @@ class Cphukum extends Controller
      */
     public function index()
     {
-        $data = Manggota::all();
+        $data = Mphukum::all();
         return view ('vphukum',compact('data'));
     }
 
@@ -70,7 +70,7 @@ class Cphukum extends Controller
     {
         
         $data = Mvmdpm::where('id',$id)->get();
-        return view('vanggota',compact('data'));
+        return view('vphukum',compact('data'));
     }
 
     /**
