@@ -19,7 +19,7 @@
                 </div>
                 <div class = "form-group">
                     <label for = "Deskripsi">Input Deskripsi</label>
-                    <input type = "text" class = "form-control" id="Deskripsi" placeholder = "Input Deskripsi" name="Deskripsi">
+                    <textarea type = "text" class = "form-control" id="Deskripsi" placeholder = "Input Deskripsi" name="Deskripsi"> </textarea>
                 </div>
                 <div class = "form-group">
                    <label for = "pict">File input</label>

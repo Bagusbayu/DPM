@@ -17,6 +17,7 @@ class CreateMvmpoltekkesTable extends Migration
             $table->bigIncrements('id');
             $table->text('misi');
             $table->text('visi');
+            $table->text('about');
             $table->timestamps();
         });
     }

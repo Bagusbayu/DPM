@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','aspirasi')
+@section('title','Aspirasi')
 @section('content')
 <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('assets/images/bg_1.jpg')">
         <div class="container">
@@ -16,21 +16,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <label for="fname">First Name</label>
+                    <label for="fname">Name</label>
                     <input type="text" id="fname" class="form-control form-control-lg">
-                </div>
+                </div><!--
                 <div class="col-md-6 form-group">
                     <label for="lname">Last Name</label>
                     <input type="text" id="lname" class="form-control form-control-lg">
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <label for="eaddress">Email Address</label>
+                    <label for="eaddress">Jurusan</label>
                     <input type="text" id="eaddress" class="form-control form-control-lg">
                 </div>
                 <div class="col-md-6 form-group">
-                    <label for="tel">Tel. Number</label>
+                    <label for="tel">Angkatan</label>
                     <input type="text" id="tel" class="form-control form-control-lg">
                 </div>
             </div>

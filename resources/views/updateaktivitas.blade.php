@@ -21,7 +21,7 @@
                 </div>
 				<div class = "form-group">
                     <label for = "Deskripsi">Input Deskripsi</label>
-                    <input type = "Deskripsi" class = "form-control" id = "Deskripsi" placeholder = "Input Deskripsi" name = "Deskripsi" value="{{ $datas->Deskripsi }}">
+                    <textarea type = "Deskripsi" class = "form-control" id = "Deskripsi" placeholder = "Input Deskripsi" name = "Deskripsi" value="{{ $datas->Deskripsi }}"></textarea>
                 </div>
                 <div class="form-group">
                         <label for="picto">File Lama:</label>
