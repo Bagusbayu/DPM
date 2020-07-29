@@ -8,12 +8,13 @@
         <div class="row">
           <div class="col-lg-9">
              <div class="section-heading">
-              <h2 class="text-black">Advo News</h2>
-              <a href="#">Read All News</a>
+              
+            <!--  <a href="#">Read All News</a> -->
             </div>
             <div class="row">
               <div class="col-lg-6">
                 <div class="post-entry-big">
+                <h2 class="text-black">Advo News</h2>
                   <a href="news-single.html" class="img-link"><img src="assets/images/blog_large_1.jpg" alt="Image" class="img-fluid"></a>
                   <div class="post-content">
                     <div class="post-meta"> 

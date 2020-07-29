@@ -17,7 +17,7 @@
                     <th>No</th>
                     <th>Judul</th>
                     <th>Deskripsi</th>
-                    <th>File</th>
+                    <th>Image</th>
                     <th>Action</th>
                 </tr>
                 </thead>
