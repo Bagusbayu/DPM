@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 //Route::get('/loginadmins', 'CAdminSuper@index');
 //Route::post('/loginPost', 'CAdminSuper@loginPost');
 //Route::get('/logout', 'CAdminSuper@logout');
@@ -43,3 +43,43 @@ Route::get('/inputaktivitas','CAktivitas@create');
 
 Route::resource('vphukum','Cphukum');
 Route::get('/inputphukum','Cphukum@create');
+
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/vm_poltekkes', function () {
+    return view('vm_poltekes');
+});
+
+Route::get('/vm_dpm', function () {
+    return view('vm_dm');
+});
+
+
+Route::get('/struktur', function () {
+    return view('struktur_dpm');
+});
+
+Route::get('/ukm', function () {
+    return view('ukm');
+});
+
+Route::get('/produk_hukum', function () {
+    return view('produk_hukum');
+});
+
+Route::get('/aktivitas', function () {
+    return view('aktivitas_dpm');
+});
+
+Route::get('/aspirasi', function () {
+    return view('aspirasi_dpm');
+});
+
+Route::get('/pemira', function () {
+    return view('pemira_dpm');
+});
+Route::get('/advonews', function () {
+    return view('advonews_dpm');
+});

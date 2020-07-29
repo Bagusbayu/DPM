@@ -70,7 +70,7 @@ class Cphukum extends Controller
     {
         
         $data = Mvmdpm::where('id',$id)->get();
-        return view('vphukum',compact('data'));
+        return view('vphukum ',compact('data'));
     }
 
     /**
