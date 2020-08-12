@@ -44,6 +44,9 @@ Route::get('/inputaktivitas','CAktivitas@create');
 Route::resource('vphukum','Cphukum');
 Route::get('/inputphukum','Cphukum@create');
 
+Route::resource('vormawa','Cormawa');
+Route::get('/inputormawa','Cormawa@create');
+
 Route::get('/', function () {
     return view('index');
 });

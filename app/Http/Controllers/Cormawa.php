@@ -5,10 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
-use App\Maktivitas;
+use App\MOrmawa;
 
-
-class CAktivitas extends Controller
+class Cormawa extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,8 @@ class CAktivitas extends Controller
      */
     public function index()
     {
-        $data = Maktivitas::all();
-        return view ('vaktivitasdpm',compact('data'));
+        $data = MOrmawa::all();
+        return view ('vormawa',compact('data'));
     }
 
     /**
@@ -28,7 +27,7 @@ class CAktivitas extends Controller
      */
     public function create()
     {
-        return view ('inputaktivitas');
+        return view ('inputormawa');
     }
 
     /**
@@ -39,8 +38,8 @@ class CAktivitas extends Controller
      */
     public function store(Request $request)
     {
-        $data = new Maktivitas();
-        $data->judul = $request->judul;
+        $data = new MOrmawa();
+        $data->nama = $request->nama;
         $data->deskripsi = $request->deskripsi;
         $file = $request->file('pict');
         $ext = $file->getClientOriginalExtension();
@@ -48,7 +47,7 @@ class CAktivitas extends Controller
         $file->move('uploads/file',$newName);
         $data->pict = $newName;
         $data->save();
-        return redirect()->route('vaktivitas.index')->with('alert-success','Data berhasil ditambahkan!');
+        return redirect()->route('vormawa.index')->with('alert-success','Data berhasil ditambahkan!');
     }
 
     /**
@@ -70,8 +69,8 @@ class CAktivitas extends Controller
      */
     public function edit($id)
     {
-        $data = Maktivitas::where('id',$id)->get();
-        return view('vaktivitas',compact('data'));
+        $data = MOrmawa::where('id',$id)->get();
+        return view('vormawa',compact('data'));
     }
 
     /**
@@ -83,7 +82,7 @@ class CAktivitas extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Maktivitas::findOrFail($id);
+         $data = Manggota::findOrFail($id);
         if (empty($request->file('pict'))){
             $data->pict = $data->pict;
         }

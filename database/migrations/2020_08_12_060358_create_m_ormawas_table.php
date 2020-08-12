@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMaktivitasTable extends Migration
+class CreateMOrmawasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateMaktivitasTable extends Migration
      */
     public function up()
     {
-        Schema::create('Aktivitas', function (Blueprint $table) {
+        Schema::create('ormawa', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('judul');
+            $table->text('nama');
             $table->text('deskripsi');
             $table->text('file');
             $table->timestamps();
@@ -29,6 +29,6 @@ class CreateMaktivitasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Aktivitas');
+        Schema::dropIfExists('ormawa');
     }
 }
