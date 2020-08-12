@@ -11,7 +11,7 @@
                     </ul>
                 </div>
         @endif
-            <form role = "form" action="{{ route('vaktivitasdpm.store') }}" method="post" enctype="multipart/form-data">
+            <form role = "form" action="{{ route('vormawa.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class = "form-group">
                     <label for = "judul">Input Judul</label>
@@ -26,7 +26,7 @@
                    <input type = "file" id = "pict" name="pict">
                 </div>
                 <button type = "submit" class = "btn btn-default">Submit</button>
-                <a type="reset" class="btn btn-md btn-danger" href="{{route('vaktivitasdpm.index')}}">Cancel</a>
+                <a type="reset" class="btn btn-md btn-danger" href="{{route('vormawa.index')}}">Cancel</a>
             </form>
         </div>
     </section>
