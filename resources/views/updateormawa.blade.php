@@ -16,8 +16,8 @@
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
                     <div class = "form-group">
-                    <label for = "judul">Input judul</label>
-                    <input type = "judul" class = "form-control" id = "judul" placeholder = "Input judul" name = "judul" value="{{ $datas->judul }}">
+                    <label for = "judul">Input Nama</label>
+                    <input type = "judul" class = "form-control" id = "nama" placeholder = "Input Nama" name = "judul" value="{{ $datas->nama }}">
                 </div>
 				<div class = "form-group">
                     <label for = "Deskripsi">Input Deskripsi</label>

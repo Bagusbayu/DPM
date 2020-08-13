@@ -9,13 +9,13 @@
                 </div>
             @endif
             <hr>
-            <a type="button" class="btn btn-primary" href="{{url('inputormawa')}}">Input</a>
+            <!-- <a type="button" class="btn btn-primary" href="{{url('inputormawa')}}">Input</a> -->
             <br><br>
             <table class = "table">
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama</th>
+                    <th>Judul</th>
                     <th>Deskripsi</th>
                     <th>Image</th>
                     <th>Action</th>

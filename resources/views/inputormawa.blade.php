@@ -14,8 +14,8 @@
             <form role = "form" action="{{ route('vormawa.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class = "form-group">
-                    <label for = "judul">Input Judul</label>
-                    <input type = "text" class = "form-control" id="judul" placeholder = "Input Judul" name="judul">
+                    <label for = "judul">Input Name</label>
+                    <input type = "text" class = "form-control" id="nama" placeholder = "Input Judul" name="judul">
                 </div>
                 <div class = "form-group">
                     <label for = "Deskripsi">Input Deskripsi</label>

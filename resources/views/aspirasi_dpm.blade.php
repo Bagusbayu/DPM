@@ -17,21 +17,27 @@
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="fname">Name</label>
-                    <input type="text" id="fname" class="form-control form-control-lg">
-                </div><!--
+                    <input type="text" id="name" class="form-control form-control-lg">
+                </div>
                 <div class="col-md-6 form-group">
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" class="form-control form-control-lg">
-                </div> -->
+                    <label for="lname">NIM</label>
+                    <input type="text" id="nim" class="form-control form-control-lg">
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <label for="eaddress">Jurusan</label>
-                    <input type="text" id="eaddress" class="form-control form-control-lg">
+                    <label for="eaddress">Email</label>
+                    <input type="text" id="email" class="form-control form-control-lg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="fname">Jurusan</label>
+                    <input type="text" id="Jurusan" class="form-control form-control-lg">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="tel">Angkatan</label>
-                    <input type="text" id="tel" class="form-control form-control-lg">
+                    <input type="text" id="angkatan" class="form-control form-control-lg">
                 </div>
             </div>
             <div class="row">
