@@ -15,10 +15,13 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Judul</th>
-                    <th>Deskripsi</th>
-                    <th>Image</th>
-                    <th>Action</th>
+                    <th>Name</th>
+                    <th>NIM</th>
+                    <th>Email</th>
+                    <th>Jurusan</th>
+                    <th>Angkatan</th>
+                    <th>Message</th>
+                    <!-- <th>Action</th> -->
                 </tr>
                 </thead>
                 <tbody>
@@ -26,11 +29,14 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{$no++}}</td>
-                        <td>{{$datas->nama}}</td>
-                        <td>{{$datas->deskripsi}}</td>
-                        <td><img src="{{ url('uploads/file/'.$datas->pict) }}" style="width: 150px; height: 150px;"></td>
+                        <td>{{$datas->name}}</td>
+                        <td>{{$datas->nim}}</td>
+                        <td>{{$datas->email}}</td>
+                        <td>{{$datas->jurusan}}</td>
+                        <td>{{$datas->angkatan}}</td>
+                        <td>{{$datas->message}}</td>
                         <td>
-                         <a href="{{ route('vormawa.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
+                         <!-- <a href="{{ route('vormawa.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a> -->
                             <!-- <form action="{{ route('vanggota.destroy', $datas->id) }}" method="post">
                                 <a href="{{ route('vanggota.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a> |
                                 {{ csrf_field() }}

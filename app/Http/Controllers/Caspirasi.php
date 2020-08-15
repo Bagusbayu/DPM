@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use App\MAspirasi;
 
 class Caspirasi extends Controller
 {
@@ -13,7 +16,8 @@ class Caspirasi extends Controller
      */
     public function index()
     {
-        //
+        $data = MAspirasi::all();
+        return view ('vaspirasi',compact('data'));
     }
 
     /**
@@ -23,7 +27,7 @@ class Caspirasi extends Controller
      */
     public function create()
     {
-        //
+       // return view('aspirasi_dpm');
     }
 
     /**
@@ -34,7 +38,15 @@ class Caspirasi extends Controller
      */
     public function store(Request $request)
     {
-        //
+       /** $data = new MAspirasi();
+        $data->name = $request->name;
+        $data->nim = $request->nim;
+        $data->email = $request->email;
+        $data->jurusan = $request->jurusan;
+        $data->angkatan = $request->angkatan;
+        $data->message = $request->message;
+        $data->save();
+        return redirect()->route('aspirasi_dpm.index')->with('alert-success','Data Diterima!'); **/
     }
 
     /**

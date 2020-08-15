@@ -47,6 +47,8 @@ Route::get('/inputphukum','Cphukum@create');
 Route::resource('vormawa','Cormawa');
 Route::get('/inputormawa','Cormawa@create');
 
+Route::resource('aspirasi_dpm','Caspirasi1');
+
 Route::get('/', function () {
     return view('index');
 });
@@ -76,9 +78,9 @@ Route::get('/aktivitas', function () {
     return view('aktivitas_dpm');
 });
 
-Route::get('/aspirasi', function () {
-    return view('aspirasi_dpm');
-});
+//Route::get('/aspirasi', function () {
+//    return view('aspirasi_dpm');
+//});
 
 Route::get('/pemira', function () {
     return view('pemira_dpm');

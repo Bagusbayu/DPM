@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
-use App\Mvmpoltekkes;
+use App\MAspirasi;
 
-class Cvmpoltekkes extends Controller
+class Caspirasi1 extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,7 @@ class Cvmpoltekkes extends Controller
      */
     public function index()
     {
-        $data = Mvmpoltekkes::all();
-        return view ('visimisipoltekkes',compact('data'));
+        return view ('aspirasi_dpm');
     }
 
     /**
@@ -27,7 +24,7 @@ class Cvmpoltekkes extends Controller
      */
     public function create()
     {
-        return view ('inputvmpoltekkes');
+        //
     }
 
     /**
@@ -38,12 +35,15 @@ class Cvmpoltekkes extends Controller
      */
     public function store(Request $request)
     {
-        $data = new Mvmpoltekkes();
-        $data->visi = $request->visi;
-        $data->misi = $request->misi;
-        $data->about = $request->about;
+        $data = new MAspirasi();
+        $data->name = $request->name;
+        $data->nim = $request->nim;
+        $data->email = $request->email;
+        $data->jurusan = $request->jurusan;
+        $data->angkatan = $request->angkatan;
+        $data->message = $request->message;
         $data->save();
-        return redirect()->route('visimisipoltekkes.index')->with('alert-success','Data berhasil ditambah!');
+        return redirect()->route('aspirasi_dpm.index')->with('alert-success','Data Diterima!');
     }
 
     /**
@@ -65,8 +65,7 @@ class Cvmpoltekkes extends Controller
      */
     public function edit($id)
     {
-        $data = Mvmpoltekkes::where('id',$id)->get();
-        return view('updatevmpoltekkes',compact('data'));
+        //
     }
 
     /**
@@ -78,12 +77,7 @@ class Cvmpoltekkes extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Mvmpoltekkes::where('id',$id)->first();
-        $data->visi = $request->visi;
-        $data->misi = $request->misi;
-        $data->about = $request->about;
-        $data->save();
-        return redirect()->route('visimisipoltekkes.index')->with('alert-success','Data berhasil diubah!');
+        //
     }
 
     /**

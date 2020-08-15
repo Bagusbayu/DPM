@@ -20,6 +20,10 @@
                 <div class = "form-group">
                     <label for = "misi">Input Misi </label>
                     <textarea type = "text" class = "form-control" id = "misi" placeholder = "Input Misi" name="misi"></textarea>
+                </div>
+                <div class = "form-group">
+                    <label for = "about">Input About </label>
+                    <textarea type = "text" class = "form-control" id = "about" placeholder = "Input About" name="about"></textarea>
                 </div><!--
                 <div class = "form-group">
                     <label  for = "password">Masukan Password</label>

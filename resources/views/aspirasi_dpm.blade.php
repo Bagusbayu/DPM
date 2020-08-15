@@ -14,44 +14,47 @@
 
       <div class="site-section">
         <div class="container">
+         <form role = "form" action="{{ route('aspirasi_dpm.store') }}" method="post">
+                {{ csrf_field() }}
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="fname">Name</label>
-                    <input type="text" id="name" class="form-control form-control-lg">
+                    <input type="text" id="name" class="form-control form-control-lg" name="name">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="lname">NIM</label>
-                    <input type="text" id="nim" class="form-control form-control-lg">
+                    <input type="text" id="nim" class="form-control form-control-lg" name="nim">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="eaddress">Email</label>
-                    <input type="text" id="email" class="form-control form-control-lg">
+                    <input type="text" id="email" class="form-control form-control-lg" name="email">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="fname">Jurusan</label>
-                    <input type="text" id="Jurusan" class="form-control form-control-lg">
+                    <input type="text" id="jurusan" class="form-control form-control-lg" name="jurusan">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="tel">Angkatan</label>
-                    <input type="text" id="angkatan" class="form-control form-control-lg">
+                    <input type="text" id="angkatan" class="form-control form-control-lg" name="angkatan">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
                     <label for="message">Message</label>
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="" id="message" cols="30" rows="10" class="form-control" name="message"></textarea>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <input type="submit" value="Send Message" class="btn btn-primary btn-lg px-5">
+                    <button type="submit" class="btn btn-primary btn-lg px-5"> Send Message </button>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 

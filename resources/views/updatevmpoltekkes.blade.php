@@ -24,6 +24,10 @@
                     <label for = "misi">Input Misi</label>
                     <textarea type = "text" class = "form-control" id = "misi" placeholder = "Input Misi" name = "misi" value="{{ $datas->misi }}"></textarea>
                 </div>
+                <div class = "form-group">
+                    <label for = "about">Input About</label>
+                    <textarea type = "text" class = "form-control" id = "misi" placeholder = "Input About" name = "about" value="{{ $datas->about }}"></textarea>
+                </div>
                 <!--<div class = "form-group">
                     <label  for = "password">Input Password</label>
                     <input type = "text" class = "form-control" id = "password" placeholder = "Input Password" name="password" value="{{ $datas->password }}">

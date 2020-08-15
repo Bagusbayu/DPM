@@ -16,6 +16,7 @@
                     <th>No</th>
                     <th>Visi</th>
                     <th>Misi</th>
+                    <th>About</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -26,6 +27,7 @@
                         <td>{{$no++}}</td>
                         <td>{{$datas->visi}}</td>
                         <td>{{$datas->misi}}</td>
+                        <td>{{$datas->about}}</td>
                         <td>
                                 <a href="{{ route('visimisipoltekkes.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
                             <!--    {{ csrf_field() }} -->
