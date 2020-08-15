@@ -13,7 +13,7 @@ class CreateMaktivitasTable extends Migration
      */
     public function up()
     {
-        Schema::create('Aktivitas', function (Blueprint $table) {
+        Schema::create('aktivitas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('judul');
             $table->text('deskripsi');
@@ -29,6 +29,6 @@ class CreateMaktivitasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Aktivitas');
+        Schema::dropIfExists('aktivitas');
     }
 }
