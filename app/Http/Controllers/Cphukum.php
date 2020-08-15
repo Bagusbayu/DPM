@@ -40,11 +40,11 @@ class Cphukum extends Controller
     {
         $data = new Mphukum();
         $data->nama = $request->nama;
-        $file = $request->file('pict');
+        $file = $request->file('file');
         $ext = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$ext;
         $file->move('uploads/file',$newName);
-        $data->pict = $newName;
+        $data->file = $newName;
         $data->save();
         return redirect()->route('vphukum.index')->with('alert-success','Data berhasil ditambahkan!');
     }
@@ -69,7 +69,7 @@ class Cphukum extends Controller
     public function edit($id)
     {
         
-        $data = Mvmdpm::where('id',$id)->get();
+        $data = Mphukum::where('id',$id)->get();
         return view('vphukum ',compact('data'));
     }
 
@@ -87,13 +87,13 @@ class Cphukum extends Controller
             $data->pict = $data->pict;
         }
         else{
-            unlink('uploads/file/'.$data->pict); //menghapus file lama
+            unlink('uploads/file/'.$data->file); //menghapus file lama
             $data->nama = $request->nama;
-            $file = $request->file('pict');
+            $file = $request->file('file');
             $ext = $file->getClientOriginalExtension();
             $newName = rand(100000,1001238912).".".$ext;
             $file->move('uploads/file',$newName);
-            $data->pict = $newName;
+            $data->file = $newName;
         }
         $data->save();
         return redirect()->route('vphukum.index')->with('alert-success','Data berhasil diubah!');
