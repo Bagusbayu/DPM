@@ -14,16 +14,16 @@
             <form role = "form" action="{{ route('vormawa.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class = "form-group">
-                    <label for = "judul">Input Name</label>
-                    <input type = "text" class = "form-control" id="nama" placeholder = "Input Judul" name="judul">
+                    <label for = "judul">Input Nama</label>
+                    <input type = "text" class = "form-control" id="nama" placeholder = "Input Nama" name="nama">
                 </div>
                 <div class = "form-group">
                     <label for = "Deskripsi">Input Deskripsi</label>
-                    <textarea type = "text" class = "form-control" id="Deskripsi" placeholder = "Input Deskripsi" name="Deskripsi"> </textarea>
+                    <input type = "textarea" class = "form-control" id="deskripsi" placeholder = "Input Deskripsi" name="deskripsi">
                 </div>
                 <div class = "form-group">
                    <label for = "pict">File input</label>
-                   <input type = "file" id = "pict" name="pict">
+                   <input type = "file" id = "file" name="file">
                 </div>
                 <button type = "submit" class = "btn btn-default">Submit</button>
                 <a type="reset" class="btn btn-md btn-danger" href="{{route('vormawa.index')}}">Cancel</a>
