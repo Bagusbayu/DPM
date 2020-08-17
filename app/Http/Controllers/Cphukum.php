@@ -70,7 +70,7 @@ class Cphukum extends Controller
     {
         
         $data = Mphukum::where('id',$id)->get();
-        return view('vphukum ',compact('data'));
+        return view('updatephukum ',compact('data'));
     }
 
     /**

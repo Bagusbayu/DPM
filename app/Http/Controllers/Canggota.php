@@ -74,7 +74,7 @@ class Canggota extends Controller
     public function edit($id)
     {
          $data = Manggota::where('id',$id)->get();
-        return view('vanggota',compact('data'));
+        return view('updateanggota',compact('data'));
     }
 
     /**

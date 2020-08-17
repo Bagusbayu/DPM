@@ -71,7 +71,7 @@ class CAktivitas extends Controller
     public function edit($id)
     {
         $data = Maktivitas::where('id',$id)->get();
-        return view('vaktivitas',compact('data'));
+        return view('updateaktivitas',compact('data'));
     }
 
     /**

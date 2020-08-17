@@ -30,7 +30,7 @@
                         <td>{{$datas->deskripsi}}</td>
                         <td><img src="{{ url('uploads/file/'.$datas->file) }}" style="width: 150px; height: 150px;"></td>
                         <td>
-                         <a href="{{ route('vanggota.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
+                         <a href="{{ route('vaktivitasdpm.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
                             <!-- <form action="{{ route('vanggota.destroy', $datas->id) }}" method="post">
                                 <a href="{{ route('vanggota.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a> |
                                 {{ csrf_field() }}

@@ -70,7 +70,7 @@ class Cormawa extends Controller
     public function edit($id)
     {
         $data = MOrmawa::where('id',$id)->get();
-        return view('vormawa',compact('data'));
+        return view('updateormawa',compact('data'));
     }
 
     /**

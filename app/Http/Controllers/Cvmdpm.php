@@ -65,7 +65,7 @@ class Cvmdpm extends Controller
     public function edit($id)
     {
         $data = Mvmdpm::where('id',$id)->get();
-        return view('vmdpm',compact('data'));
+        return view('updatevmdpm',compact('data'));
     }
 
     /**
@@ -78,8 +78,8 @@ class Cvmdpm extends Controller
     public function update(Request $request, $id)
     {
         $data = Mvmdpm::where('id',$id)->first();
-        $data->visi = $request->misi;
-        $data->misi = $request->password;
+        $data->visi = $request->visi;
+        $data->misi = $request->misi;
         $data->save();
         return redirect()->route('vmdpm.index')->with('alert-success','Data berhasil diubah!');
     }

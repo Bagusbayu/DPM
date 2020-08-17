@@ -22,7 +22,7 @@
                 </div>
                 <div class = "form-group">
                     <label for = "misi">Input Misi</label>
-                    <textarea type = "text" class = "form-control" id = "misi" placeholder = "Input Misi" name = "misi" value="{{ $datas->misi }}"></textarea>
+                    <input type = "text" class = "form-control" id = "misi" placeholder = "Input Misi" name = "misi" value="{{ $datas->misi }}">
                 </div>
                 <!--<div class = "form-group">
                     <label  for = "password">Input Password</label>
