@@ -12,7 +12,7 @@
                     </ul>
                 </div>
         @endif
-            <form role = "form" action="{{ route('visimisipoltekkes.store') }}" method="post">
+            <form role = "form" action="{{ route('vadminsuper.store') }}" method="post">
                 {{ csrf_field() }}
                 <div class = "form-group">
                     <label for = "name">Input Name</label>
@@ -27,7 +27,7 @@
                     <input type = "text" class = "form-control" id = "password" placeholder = "Masukan Password" name="password">
                 </div>
                 <button type = "submit" class = "btn btn-default">Submit</button>
-                <a type="reset" class="btn btn-md btn-danger" href="{{route('visimisipoltekkes.index')}}">Cancel</a>
+                <a type="reset" class="btn btn-md btn-danger" href="{{route('vadminsuper.index')}}">Cancel</a>
             </form>
         </div>
     </section>
