@@ -13,7 +13,7 @@
                 </div>
         @endif
             @foreach($data as $datas)
-                <form role = "form" action="{{ route('visimisipolekkes.update', $datas->id) }}" method="post">
+                <form role = "form" action="{{ route('visimisipoltekkes.update', $datas->id) }}" method="post">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
                 <div class = "form-group">
@@ -22,18 +22,18 @@
                 </div>
                 <div class = "form-group">
                     <label for = "misi">Input Misi</label>
-                    <textarea type = "text" class = "form-control" id = "misi" placeholder = "Input Misi" name = "misi" value="{{ $datas->misi }}"></textarea>
+                    <input type = "text" class = "form-control" id = "misi" placeholder = "Input Misi" name = "misi" value="{{ $datas->misi }}">
                 </div>
                 <div class = "form-group">
                     <label for = "about">Input About</label>
-                    <textarea type = "text" class = "form-control" id = "misi" placeholder = "Input About" name = "about" value="{{ $datas->about }}"></textarea>
+                    <input type = "text" class = "form-control" id = "misi" placeholder = "Input About" name = "about" value="{{ $datas->about }}">
                 </div>
                 <!--<div class = "form-group">
                     <label  for = "password">Input Password</label>
                     <input type = "text" class = "form-control" id = "password" placeholder = "Input Password" name="password" value="{{ $datas->password }}">
                 </div> -->
                     <button type = "submit" class = "btn btn-default">Submit</button>
-                    <a type="reset" class="btn btn-md btn-danger" href="{{route('visimisipolekkes.index')}}">Cancel</a>
+                    <a type="reset" class="btn btn-md btn-danger" href="{{route('visimisipoltekkes.index')}}">Cancel</a>
                 </form>
             @endforeach
         </div>
