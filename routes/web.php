@@ -48,6 +48,7 @@ Route::resource('vormawa','Cormawa');
 Route::get('/inputormawa','Cormawa@create');
 
 Route::resource('aspirasi_dpm','Caspirasi1');
+Route::resource('vaspirasi','Caspirasi');
 
 Route::get('/', function () {
     return view('index');

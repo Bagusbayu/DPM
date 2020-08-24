@@ -16,7 +16,8 @@ class Caspirasi extends Controller
      */
     public function index()
     {
-        $data = MAspirasi::all();
+        $data = MAspirasi::orderBy('id','desc')->paginate(10);
+        //$data = MAspirasi::all();
         return view ('vaspirasi',compact('data'));
     }
 
