@@ -42,6 +42,7 @@ class Canggota extends Controller
             'pict' => 'required',
         ]); */
         $data = new Manggota();
+        //$data = new \App\File();
         $data->nama = $request->nama;
         $data->jurusan = $request->jurusan;
         $data->angkatan = $request->angkatan;
@@ -73,7 +74,8 @@ class Canggota extends Controller
      */
     public function edit($id)
     {
-         $data = Manggota::where('id',$id)->get();
+        //$data = Manggota::where('id',$id)->get();
+        $data = \App\Manggota::findOrFail($id);
         return view('updateanggota',compact('data'));
     }
 
