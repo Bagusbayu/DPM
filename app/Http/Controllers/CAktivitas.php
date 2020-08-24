@@ -70,7 +70,8 @@ class CAktivitas extends Controller
      */
     public function edit($id)
     {
-        $data = Maktivitas::where('id',$id)->get();
+        $data = \App\Maktivitas::findOrFail($id);
+        //$data = Maktivitas::where('id',$id)->get();
         return view('updateaktivitas',compact('data'));
     }
 
