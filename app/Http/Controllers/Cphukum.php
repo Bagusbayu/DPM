@@ -69,7 +69,8 @@ class Cphukum extends Controller
     public function edit($id)
     {
         
-        $data = Mphukum::where('id',$id)->get();
+        $data = \App\Mphukum::findOrFail($id);
+        //data = Mphukum::where('id',$id)->get();
         return view('updatephukum ',compact('data'));
     }
 
