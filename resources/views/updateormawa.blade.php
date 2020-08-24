@@ -17,15 +17,15 @@
                     {{ method_field('PUT') }}
                     <div class = "form-group">
                     <label for = "judul">Input Nama</label>
-                    <input type = "judul" class = "form-control" id = "nama" placeholder = "Input Nama" name = "judul" value="{{ $datas->nama }}">
+                    <input type = "judul" class = "form-control" id = "nama" placeholder = "Input Nama" name = "judul" value="{{ $data->nama }}">
                 </div>
 				<div class = "form-group">
                     <label for = "Deskripsi">Input Deskripsi</label>
-                    <textarea type = "Deskripsi" class = "form-control" id = "Deskripsi" placeholder = "Input Deskripsi" name = "Deskripsi" value="{{ $datas->Deskripsi }}"></textarea>
+                    <input type = "Deskripsi" class = "form-control" id = "Deskripsi" placeholder = "Input Deskripsi" name = "Deskripsi" value="{{ $data->deskripsi }}">
                 </div>
                 <div class="form-group">
                         <label for="picto">File Lama:</label>
-                        <img src="{{ url('uploads/file/'.$data->pict) }}" style="width: 150px; height: 150px;">
+                        <img src="{{ url('uploads/file/'.$data->file) }}" style="width: 150px; height: 150px;">
                     </div>
                     <div class = "form-group">
                         <label for = "pict">File input</label>

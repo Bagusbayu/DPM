@@ -69,7 +69,8 @@ class Cormawa extends Controller
      */
     public function edit($id)
     {
-        $data = MOrmawa::where('id',$id)->get();
+        $data = \App\MOrmawa::findOrFail($id);
+        //$data = MOrmawa::where('id',$id)->get();
         return view('updateormawa',compact('data'));
     }
 
