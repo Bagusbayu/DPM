@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-12 form-group">
                     <label for="message">Message</label>
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control" name="message"></textarea>
+                    <input name="message" id="message" cols="30" rows="10" class="form-control" name="message">
                 </div>
             </div>
 
