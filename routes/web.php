@@ -51,7 +51,7 @@ Route::resource('aspirasi_dpm','Caspirasi1');
 Route::resource('vaspirasi','Caspirasi');
 
 Route::get('/', function () {
-    return view('index');
+    return view('index','Cindex');
 });
 
 Route::get('/vm_poltekkes', function () {
