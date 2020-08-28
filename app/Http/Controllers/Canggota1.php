@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mvmdpm;
 
-class Cvmdpm1 extends Controller
+class Canggota1 extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class Cvmdpm1 extends Controller
      */
     public function index()
     {
-        $data = Mvmdpm::all();
-        return view ('vm_dm',compact('data'));
+        //
     }
 
     /**

@@ -37,7 +37,7 @@
                         <h2 class="section-title-underline mb-5">
                             <span>Misi DPM</span>
                         </h2>
-                        <p>{{$datas->Misi}}</p>
+                        <p>{{$datas->misi}}</p>
                         <p></p>
                     </div>
                 </div>

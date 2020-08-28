@@ -64,9 +64,9 @@ Route::resource('vm_dm','Cvmdpm1');
 //    return view('vm_poltekes');
 //});
 
-Route::get('/vm_dpm', function () {
-    return view('vm_dm');
-});
+//Route::get('/vm_dpm', function () {
+//    return view('vm_dm');
+//});
 
 
 Route::get('/struktur', function () {
