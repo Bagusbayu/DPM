@@ -26,6 +26,7 @@
                 </div>
                 <div class = "form-group">
                     <label for = "about">Input About</label>
+                    <!-- <textarea type = "text" class = "form-control" id = "about" placeholder = "Input About" name = "about" value="{{ $datas->about }}"></textarea> -->
                     <input type = "text" class = "form-control" id = "misi" placeholder = "Input About" name = "about" value="{{ $datas->about }}">
                 </div>
                 <!--<div class = "form-group">
