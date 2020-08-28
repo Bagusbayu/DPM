@@ -66,7 +66,7 @@
         
       <div class="d-flex align-items-center">
           <div class="site-logo">
-            <a href="/" class="d-block">
+            <a href="/index" class="d-block">
               <img src="assets/images/dpm144.png" alt="Image" class="img-fluid">
             </a>
           </div>
@@ -74,12 +74,12 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active">
-                  <a href="/" class="nav-link text-left">Beranda</a>
+                  <a href="/index" class="nav-link text-left">Beranda</a>
                 </li>
                 <li class="has-children">
                   <a href="#" class="nav-link text-left">Visi Misi</a>
                   <ul class="dropdown">
-                    <li><a href="/vm_poltekkes">Visi Misi Poltekkes</a></li>
+                    <li><a href="/vm_poltekes">Visi Misi Poltekkes</a></li>
                     <li><a href="/vm_dpm">Visi Misi DPM</a></li>
                   </ul>
                 </li>

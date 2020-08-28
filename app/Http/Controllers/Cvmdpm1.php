@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mvmpoltekkes;
+use App\Mvmdpm;
 
-class Cindex extends Controller
+class Cvmdpm1 extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class Cindex extends Controller
      */
     public function index()
     {
-        $data = Mvmpoltekkes::all();
-        return view ('index',compact('data'));
+        $data = Mvmdpm::all();
+        return view ('vmdpm',compact('data'));
     }
 
     /**
@@ -25,8 +25,7 @@ class Cindex extends Controller
      */
     public function create()
     {
-        //$data = Mvmpoltekkes::all();
-        //return view ('vm_poltekkes',compact('data'));
+        //
     }
 
     /**

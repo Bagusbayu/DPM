@@ -15,6 +15,7 @@
 
     <div class="site-section">
         <div class="container">
+        @foreach($data as $datas)
             <div class="row mb-5">
                 <div class="col-lg-6 mb-lg-0 mb-4">
                     <img src="assets/images/course_4.jpg" alt="Image" class="img-fluid"> 
@@ -23,8 +24,8 @@
                     <h2 class="section-title-underline mb-5">
                         <span>Visi DPM</span>
                     </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque dolore libero corrupti! Itaque, delectus?</p>
-                    <p>Modi sit dolor repellat esse! Sed necessitatibus itaque libero odit placeat nesciunt, voluptatum totam facere.</p>
+                    <p>{{$datas->visi}}</p>
+                    <p>.</p>
                 </div>
             </div>
 
@@ -36,10 +37,11 @@
                         <h2 class="section-title-underline mb-5">
                             <span>Misi DPM</span>
                         </h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque dolore libero corrupti! Itaque, delectus?</p>
-                        <p>Modi sit dolor repellat esse! Sed necessitatibus itaque libero odit placeat nesciunt, voluptatum totam facere.</p>
+                        <p>{{$datas->Misi}}</p>
+                        <p></p>
                     </div>
                 </div>
+                @endforeach
         </div>
     </div>
 

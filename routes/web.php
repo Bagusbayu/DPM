@@ -50,13 +50,19 @@ Route::get('/inputormawa','Cormawa@create');
 Route::resource('aspirasi_dpm','Caspirasi1');
 Route::resource('vaspirasi','Caspirasi');
 
-Route::get('/', function () {
-    return view('index','Cindex');
-});
+Route::resource('index','Cindex');
 
-Route::get('/vm_poltekkes', function () {
-    return view('vm_poltekes');
-});
+Route::resource('vm_poltekes','Cvmpoltekkes1');
+
+Route::resource('vm_dm','Cvmdpm1');
+
+//Route::get('/', function () {
+//    return view('index','Cindex');
+//});
+
+//Route::get('/vm_poltekkes', function () {
+//    return view('vm_poltekes');
+//});
 
 Route::get('/vm_dpm', function () {
     return view('vm_dm');
@@ -75,9 +81,9 @@ Route::get('/produk_hukum', function () {
     return view('produk_hukum');
 });
 
-Route::get('/aktivitas', function () {
-    return view('aktivitas_dpm');
-});
+//Route::get('/aktivitas', function () {
+//    return view('aktivitas_dpm');
+//});
 
 //Route::get('/aspirasi', function () {
 //    return view('aspirasi_dpm');
