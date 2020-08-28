@@ -26,6 +26,10 @@
                     <input type = "text" class = "form-control" id = "angkatan" placeholder = "Input Tahun Angkatan" name="angkatan">
                 </div>
                 <div class = "form-group">
+                    <label for = "jabatan">Input Jabatan</label>
+                    <input type = "text" class = "form-control" id = "jabatan" placeholder = "Input Jabatan" name="jabatan">
+                </div>
+                <div class = "form-group">
                    <label for = "pict">File input</label>
                    <input type = "file" id = "pict" name="pict">
                 </div>

@@ -46,6 +46,7 @@ class Canggota extends Controller
         $data->nama = $request->nama;
         $data->jurusan = $request->jurusan;
         $data->angkatan = $request->angkatan;
+        $data->jabatan = $request->jabatan;
         $file = $request->file('pict');
         $ext = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$ext;
@@ -74,7 +75,7 @@ class Canggota extends Controller
      */
     public function edit($id)
     {
-        //$data = Manggota::where('id',$id)->get();
+        $data = Manggota::where('id',$id)->get();
         $data = \App\Manggota::findOrFail($id);
         return view('updateanggota',compact('data'));
     }
@@ -94,10 +95,12 @@ class Canggota extends Controller
             $data->pict = $data->pict;
         }
         else{
+            $data = Manggota::where('id',$id)->first();
             unlink('uploads/file/'.$data->pict); //menghapus file lama
             $data->nama = $request->nama;
             $data->jurusan = $request->jurusan;
             $data->angkatan = $request->angkatan;
+            $data->jabatan = $request->jabatan;
             $file = $request->file('pict');
             $ext = $file->getClientOriginalExtension();
             $newName = rand(100000,1001238912).".".$ext;

@@ -24,8 +24,12 @@
                     <input type = "text" class = "form-control" id = "jurusan" placeholder = "Input Jurusan" name = "jurusan" value="{{ $data->jurusan }}">
                 </div>
                 <div class = "form-group">
-                    <label for = "angkatan">Input Angkatan</label>
-                    <input type = "text" class = "form-control" id = "angkatan" placeholder = "Input Angkatan" name = "angkatan" value="{{ $data->angkatan }}">
+                    <label for = "angkatan">Input Tahun Angkatan</label>
+                    <input type = "text" class = "form-control" id = "angkatan" placeholder = "Input Tahun Angkatan" name = "angkatan" value="{{ $data->angkatan }}">
+                </div>
+                <div class = "form-group">
+                    <label for = "jabatan">Input Jabatan</label>
+                    <input type = "text" class = "form-control" id = "jabatan" placeholder = "Input Jabatan" name = "jabatan" value="{{ $data->jabatan }}">
                 </div>
                     <div class="form-group">
                         <label for="picto">Foto Lama:</label>

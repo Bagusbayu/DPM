@@ -18,6 +18,7 @@
                     <th>Nama</th>
                     <th>Jurusan</th>
                     <th>Angkatan</th>
+                    <th>Jabatan</th>
                     <th>Pict</th>
                     <th>Action</th>
                 </tr>
@@ -30,6 +31,7 @@
                         <td>{{$datas->nama}}</td>
                         <td>{{$datas->jurusan}}</td>
                         <td>{{$datas->angkatan}}</td>
+                        <td>{{$datas->jabatan}}</td>
                         <td><img src="{{ url('uploads/file/'.$datas->pict) }}" style="width: 150px; height: 150px;"></td>
                         <td>
                          <a href="{{ route('vanggota.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>

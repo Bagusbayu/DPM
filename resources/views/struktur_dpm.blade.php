@@ -26,17 +26,20 @@
           </div>
         </div> -->
         <div class="row">
+        @foreach($data as $datas)
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-5">
 
             <div class="feature-1 border person text-center">
-                <img src="assets/images/person_1.jpg" alt="Image" class="img-fluid">
+                <img src="{{ url('uploads/file/'.$datas->pict) }}" alt="Image" class="img-fluid">
               <div class="feature-1-content">
-                <h2>Craig Daniel</h2>
-                <span class="position mb-3 d-block">Math Teacher</span>    
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <h2>{{$datas->nama}}</h2>
+                <span class="position mb-3 d-block">{{$datas->jurusan}}</span>    
+                <p>{{$datas->angkatan}}</p>
               </div>
             </div>
-          </div> <!--
+          </div> 
+        @endforeach
+          <!--
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-5">
             <div class="feature-1 border person text-center">
                 <img src="assets/images/person_2.jpg" alt="Image" class="img-fluid">
@@ -88,9 +91,9 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
               </div>
             </div>
-          </div>
+          </div>-->
         </div>
-      </div>  -->
+      </div>  
     </div>
 
 

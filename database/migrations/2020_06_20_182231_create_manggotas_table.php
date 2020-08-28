@@ -18,6 +18,7 @@ class CreateManggotasTable extends Migration
             $table->text('nama');
             $table->text('jurusan');
             $table->text('angkatan');
+            $table->text('jabatan');
             $table->text('pict');
             $table->timestamps();
         });

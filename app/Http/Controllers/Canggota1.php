@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Manggota;
 
 class Canggota1 extends Controller
 {
@@ -13,7 +14,8 @@ class Canggota1 extends Controller
      */
     public function index()
     {
-        //
+        $data = Manggota::all();
+        return view ('struktur_dpm',compact('data'));
     }
 
     /**
