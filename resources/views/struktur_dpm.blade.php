@@ -33,8 +33,8 @@
                 <img src="{{ url('uploads/file/'.$datas->pict) }}" alt="Image" class="img-fluid">
               <div class="feature-1-content">
                 <h2>{{$datas->nama}}</h2>
-                <span class="position mb-3 d-block">{{$datas->jurusan}}</span>    
-                <p>{{$datas->angkatan}}</p>
+                <span class="position mb-3 d-block">{{$datas->jurusan}} , {{$datas->angkatan}}</span>    
+                <p>{{$datas->jabatan}}</p>
               </div>
             </div>
           </div> 

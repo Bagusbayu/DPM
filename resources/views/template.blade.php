@@ -84,7 +84,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="/struktur" class="nav-link text-left">Profile Struktur Anggota</a>
+                  <a href="/struktur_dpm" class="nav-link text-left">Profile Struktur Anggota</a>
                 </li>
                 <li>
                   <a href="/ukm" class="nav-link text-left">UKM</a>
