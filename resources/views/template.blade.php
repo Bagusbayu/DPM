@@ -87,7 +87,7 @@
                   <a href="/struktur_dpm" class="nav-link text-left">Profile Struktur Anggota</a>
                 </li>
                 <li>
-                  <a href="/ukm" class="nav-link text-left">UKM</a>
+                  <a href="/ormawa" class="nav-link text-left">ORMAWA</a>
                 </li>
                 <li>
                     <a href="/produk_hukum" class="nav-link text-left">Produk Hukum</a>

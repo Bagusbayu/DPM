@@ -83,13 +83,14 @@ class Cormawa extends Controller
      */
     public function update(Request $request, $id)
     {
-         $data = Manggota::findOrFail($id);
+        $data = MOrmawa::findOrFail($id);
         if (empty($request->file('file'))){
             $data->file = $data->file;
         }
         else{
+            //$data = MOrmawa::where('id',$id)->first();
             unlink('uploads/file/'.$data->file); //menghapus file lama
-            $data->judul = $request->judul;
+            $data->nama = $request->nama;
             $data->deskripsi = $request->deskripsi;
             $file = $request->file('file');
             $ext = $file->getClientOriginalExtension();
@@ -98,7 +99,7 @@ class Cormawa extends Controller
             $data->file = $newName;
         }
         $data->save();
-        return redirect()->route('vaktivitas.index')->with('alert-success','Data berhasil diubah!');
+        return redirect()->route('vormawa.index')->with('alert-success','Data berhasil diubah!');
     }
 
     /**

@@ -57,6 +57,8 @@ Route::resource('vm_poltekes','Cvmpoltekkes1');
 Route::resource('vm_dm','Cvmdpm1');
 
 Route::resource('struktur_dpm','Canggota1');
+
+Route::resource('ormawa','Cormawa1');
 //Route::get('/', function () {
 //    return view('index','Cindex');
 //});
@@ -74,9 +76,9 @@ Route::resource('struktur_dpm','Canggota1');
 //    return view('struktur_dpm');
 //});
 
-Route::get('/ukm', function () {
-    return view('ukm');
-});
+//Route::get('/ukm', function () {
+//    return view('ukm');
+//});
 
 Route::get('/produk_hukum', function () {
     return view('produk_hukum');

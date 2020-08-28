@@ -16,20 +16,22 @@
       <div class="site-section">
         <div class="container">
             <div class="row">
+            @foreach($data as $datas)
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-1-item">
                         <figure class="thumnail">
-                        <a href="course-single.html"><img src="assets/images/course_1.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="course-single.html"><img src="{{ url('uploads/file/'.$datas->file) }}" alt="Image" class="img-fluid"></a>
                         
-                        <div class="category"><h3><center>Anggota Unknown</center></h3></div>  
+                        <div class="category"><h3><center>{{$datas->nama}}</center></h3></div>  
                         </figure>
                         <div class="course-1-content pb-4">
-                        <h2><p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p></h2>
+                        <h2><p class="desc mb-4">{{$datas->deskripsi}}</p></h2>
 
                         </div>
                     </div>
                 </div>
-
+                @endforeach
+<!--
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-1-item">
                         <figure class="thumnail">
@@ -99,7 +101,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div>  -->
 
             </div>
         </div>

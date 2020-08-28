@@ -17,11 +17,11 @@
                     {{ method_field('PUT') }}
                     <div class = "form-group">
                     <label for = "judul">Input Nama</label>
-                    <input type = "judul" class = "form-control" id = "nama" placeholder = "Input Nama" name = "judul" value="{{ $data->nama }}">
+                    <input type = "text" class = "form-control" id = "nama" placeholder = "Input Nama" name = "nama" value="{{ $data->nama }}">
                 </div>
 				<div class = "form-group">
                     <label for = "Deskripsi">Input Deskripsi</label>
-                    <input type = "Deskripsi" class = "form-control" id = "Deskripsi" placeholder = "Input Deskripsi" name = "Deskripsi" value="{{ $data->deskripsi }}">
+                    <input type = "text" class = "form-control" id = "deskripsi" placeholder = "Input Deskripsi" name = "deskripsi" value="{{ $data->deskripsi }}">
                 </div>
                 <div class="form-group">
                         <label for="picto">File Lama:</label>
@@ -29,7 +29,7 @@
                     </div>
                     <div class = "form-group">
                         <label for = "pict">File input</label>
-                        <input type = "file" id = "pict" name="pict">
+                        <input type = "file" id = "file" name="file">
                     </div>
                     <button type = "submit" class = "btn btn-default">Submit</button>
                     <a type="reset" class="btn btn-md btn-danger" href="{{route('vormawa.index')}}">Cancel</a>
