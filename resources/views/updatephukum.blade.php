@@ -20,7 +20,8 @@
                     <input type = "text" class = "form-control" id = "nama" placeholder = "Input Nama" name = "nama" value="{{ $data->nama }}">
                 </div><div class="form-group">
                         <label for="picto">File Lama:</label>
-                        <img src="{{ url('uploads/file/'.$data->file) }}" style="width: 150px; height: 150px;">
+                        <a src="{{ url('uploads/file/'.$data->file) }}">File lama</a>
+                        <!-- <img src="{{ url('uploads/file/'.$data->file) }}" style="width: 150px; height: 150px;"> -->
                     </div>
                     <div class = "form-group">
                         <label for = "pict">File input</label>

@@ -40,11 +40,13 @@ class Cphukum extends Controller
     {
         $data = new Mphukum();
         $data->nama = $request->nama;
+        //$data->file = $request->file;
         $file = $request->file('file');
-        $ext = $file->getClientOriginalExtension();
-        $newName = rand(100000,1001238912).".".$ext;
-        $file->move('uploads/file',$newName);
-        $data->file = $newName;
+        $ext = $file->getClientOriginalName();
+        //$ext = $file->getClientOriginalExtension();
+        //$newName = rand(100000,1001238912).".".$ext;
+        $file->move('uploads/file',$ext);
+        $data->file = $ext;
         $data->save();
         return redirect()->route('vphukum.index')->with('alert-success','Data berhasil ditambahkan!');
     }
