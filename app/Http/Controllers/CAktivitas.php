@@ -17,7 +17,7 @@ class CAktivitas extends Controller
      */
     public function index()
     {
-        $data = Maktivitas::all();
+        $data = Maktivitas::orderBy('id','desc')->paginate(10);
         return view ('vaktivitasdpm',compact('data'));
     }
 

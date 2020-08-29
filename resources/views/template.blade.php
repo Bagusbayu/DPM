@@ -93,9 +93,9 @@
                     <a href="/produk_hukum" class="nav-link text-left">Produk Hukum</a>
                 </li>
                 <li class="has-children">
-                    <a href="/aktivitas" class="nav-link text-left">Aktifitas DPM</a>
+                    <a href="#" class="nav-link text-left">Aktifitas DPM</a>
                     <ul class="dropdown">
-                    <li><a href="/aspirasi">Aspirasi</a></li>
+                    <li><a href="/aspirasi_dpm">Aspirasi</a></li>
                     <li><a href="/pemira">Pemira</a></li>
                     <li><a href="/advonews">AdvoNews</a></li>
                   </ul>

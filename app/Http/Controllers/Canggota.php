@@ -16,7 +16,7 @@ class Canggota extends Controller
      */
     public function index()
     {
-        $data = Manggota::all();
+        $data = Manggota::orderBy('id','desc')->paginate(10);
         return view ('vanggota',compact('data'));
     }
 
