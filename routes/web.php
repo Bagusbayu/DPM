@@ -59,6 +59,8 @@ Route::resource('vm_dm','Cvmdpm1');
 Route::resource('struktur_dpm','Canggota1');
 
 Route::resource('ormawa','Cormawa1');
+
+Route::resource('produk_hukum','Cphukum1');
 //Route::get('/', function () {
 //    return view('index','Cindex');
 //});
@@ -80,9 +82,9 @@ Route::resource('ormawa','Cormawa1');
 //    return view('ukm');
 //});
 
-Route::get('/produk_hukum', function () {
-    return view('produk_hukum');
-});
+//Route::get('/produk_hukum', function () {
+//    return view('produk_hukum');
+//});
 
 //Route::get('/aktivitas', function () {
 //    return view('aktivitas_dpm');
