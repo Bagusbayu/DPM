@@ -12,12 +12,12 @@
                     </ul>
                 </div>
         @endif
-                <form role = "form" action="{{ route('vphukum.update', $data->id) }}" method="post" enctype="multipart/form-data">
+                <form role = "form" action="{{ route('vadvonews.update', $data->id) }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
                     <div class = "form-group">
-                    <label for = "nama">Input Nama</label>
-                    <input type = "text" class = "form-control" id = "nama" placeholder = "Input Nama" name = "nama" value="{{ $data->nama }}">
+                    <label for = "nama">Input Judul</label>
+                    <input type = "text" class = "form-control" id = "judul" placeholder = "Input Judul" name = "judul" value="{{ $data->judul }}">
                 </div><div class="form-group">
                         <label for="picto">File Lama:</label>
                         <a src="{{ url('uploads/file/'.$data->file) }}">File lama</a>
@@ -28,7 +28,7 @@
                         <input type = "file" id = "file" name="file">
                     </div>
                     <button type = "submit" class = "btn btn-default">Submit</button>
-                    <a type="reset" class="btn btn-md btn-danger" href="{{route('vphukum.index')}}">Cancel</a>
+                    <a type="reset" class="btn btn-md btn-danger" href="{{route('vadvonews.index')}}">Cancel</a>
                 </form>
         </div>
 
