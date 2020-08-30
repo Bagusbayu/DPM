@@ -13,14 +13,16 @@
       </div> 
 
 
-      <div class="site-section">
+      <div class="site-section"> 
         <div class="container">
+       
             <div class="row">
             @foreach($data as $datas)
                 <div class="col-lg-4 col-md-6 mb-4">
+                
                     <div class="course-1-item">
                         <figure class="thumnail">
-                        <a href="course-single.html"><img src="{{ url('uploads/file/'.$datas->file) }}" alt="Image" class="img-fluid"></a>
+                        <a href="course-single.html"><img src="{{ url('uploads/file/'.$datas->file) }}" alt="Image" class="img-fluid" style="width:349.98px;height:233.13px;"></a>
                         
                         <div class="category"><h3><center>{{$datas->nama}}</center></h3></div>  
                         </figure>
@@ -29,10 +31,10 @@
 
                         </div>
                     </div>
+                    
                 </div>
                 @endforeach
-<!--
-                <div class="col-lg-4 col-md-6 mb-4">
+ <!--               <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-1-item">
                         <figure class="thumnail">
                         <a href="course-single.html"><img src="assets/images/course_2.jpg" alt="Image" class="img-fluid"></a>
@@ -101,10 +103,11 @@
 
                         </div>
                     </div>
-                </div>  -->
+                </div> -->
+               
 
             </div>
         </div>
-    </div>
+     </div>
 
 @endsection

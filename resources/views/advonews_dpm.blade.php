@@ -40,9 +40,9 @@
                     @endforeach
                   </div>
                 </div>
-<!--
+
                 <div class="post-entry-big horizontal d-flex mb-4">
-                  <a href="news-single.html" class="img-link mr-4"><img src="assets/images/blog_2.jpg" alt="Image" class="img-fluid"></a>
+                <!--  <a href="news-single.html" class="img-link mr-4"><img src="assets/images/blog_2.jpg" alt="Image" class="img-fluid"></a>
                   <div class="post-content">
                     <div class="post-meta">
                       <a href="#">June 6, 2019</a>
@@ -50,10 +50,10 @@
                       <a href="#">Admission</a>, <a href="#">Updates</a>
                     </div>
                     <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
-                  </div>
+                  </div> -->
                 </div>
 
-                <div class="post-entry-big horizontal d-flex mb-4">
+                <div class="post-entry-big horizontal d-flex mb-4"> <!--
                   <a href="news-single.html" class="img-link mr-4"><img src="assets/images/blog_1.jpg" alt="Image" class="img-fluid"></a>
                   <div class="post-content">
                     <div class="post-meta">
@@ -62,8 +62,8 @@
                       <a href="#">Admission</a>, <a href="#">Updates</a>
                     </div>
                     <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
-                  </div>
-                </div> -->
+                  </div> -->
+                </div> 
               </div>
             </div>
           </div>

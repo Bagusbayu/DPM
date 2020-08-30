@@ -38,6 +38,9 @@ class Cormawa extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048|dimensions:max_width=800,max_height=494',
+        ]);
         $data = new MOrmawa();
         $data->nama = $request->nama;
         $data->deskripsi = $request->deskripsi;

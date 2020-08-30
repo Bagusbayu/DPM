@@ -22,7 +22,8 @@
                     <textarea type = "text" class = "form-control" id="deskripsi" placeholder = "Input Deskripsi" name="deskripsi"></textarea>
                 </div>
                 <div class = "form-group">
-                   <label for = "pict">File input</label>
+                   <label for = "pict">Input Image</label><br>
+                   <label for = "pict">Max Width : 800, Max Height : 494</label>
                    <input type = "file" id = "file" name="file">
                 </div>
                 <button type = "submit" class = "btn btn-default">Submit</button>
