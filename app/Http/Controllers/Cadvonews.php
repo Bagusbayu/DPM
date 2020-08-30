@@ -93,6 +93,9 @@ class Cadvonews extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'pict' => 'required|file|image|mimes:jpeg,png,jpg|max:2048|dimensions:max_width=620,max_height=413',
+        ]);
         $data = Madvonews::findOrFail($id);
         if (empty($request->file('file'))){
             $data->file = $data->file;

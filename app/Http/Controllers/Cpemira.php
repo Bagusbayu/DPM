@@ -16,8 +16,8 @@ class Cpemira extends Controller
      */
     public function index()
     {
-        $data = Madvonews::orderBy('id','desc')->paginate(10);
-        return view ('vadvonews',compact('data'));
+        $data = Mpemira::orderBy('id','desc')->paginate(10);
+        return view ('vpemira',compact('data'));
     }
 
     /**
@@ -27,7 +27,7 @@ class Cpemira extends Controller
      */
     public function create()
     {
-        //
+        return view ('inputpemira');
     }
 
     /**
@@ -38,7 +38,26 @@ class Cpemira extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'pict' => 'required|file|image|mimes:jpeg,png,jpg|max:2048|dimensions:max_width=620,max_height=413',
+        ]);
+        $data = new Mpemira();
+        $data->judul = $request->judul;
+        //$data->file = $request->file;
+        $file = $request->file('file');
+        $ext = $file->getClientOriginalName();
+        //$ext = $file->getClientOriginalExtension();
+        //$newName = rand(100000,1001238912).".".$ext;
+        $file->move('uploads/file',$ext);
+        $data->file = $ext;
+        
+        $file = $request->file('pict');
+        $exts = $file->getClientOriginalExtension();
+        $newName = rand(100000,1001238912).".".$exts;
+        $file->move('uploads/file',$newName);
+        $data->pict = $newName;
+        $data->save();
+        return redirect()->route('vpemira.index')->with('alert-success','Data berhasil ditambahkan!');
     }
 
     /**
@@ -60,7 +79,9 @@ class Cpemira extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = \App\Mpemira::findOrFail($id);
+        //$data = Madvonews::where('id',$id)->get();
+        return view('updatpemira ',compact('data'));
     }
 
     /**
@@ -72,7 +93,30 @@ class Cpemira extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'pict' => 'required|file|image|mimes:jpeg,png,jpg|max:2048|dimensions:max_width=620,max_height=413',
+        ]);
+        $data = Mpemira::findOrFail($id);
+        if (empty($request->file('file'))){
+            $data->file = $data->file;
+        }
+        else{
+            //$data = Madvonews::where('id',$id)->first();
+            unlink('uploads/file/'.$data->file); //menghapus file lama
+            $data->judul = $request->judul;
+            $file = $request->file('file');
+            $ext = $file->getClientOriginalName();
+            //$newName = rand(100000,1001238912).".".$ext;
+            $file->move('uploads/file',$ext);
+            $data->file = $ext;
+            $file = $request->file('pict');
+            $exts = $file->getClientOriginalExtension();
+            $newName = rand(100000,1001238912).".".$exts;
+            $file->move('uploads/file',$newName);
+            $data->pict = $newName;
+        }
+        $data->save();
+        return redirect()->route('vpemira.index')->with('alert-success','Data berhasil diubah!');
     }
 
     /**
