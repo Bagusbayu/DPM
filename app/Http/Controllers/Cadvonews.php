@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use App\Madvonews;
 
 class Cadvonews extends Controller
 {
@@ -13,7 +16,8 @@ class Cadvonews extends Controller
      */
     public function index()
     {
-        //
+        $data = Madvonews::all();
+        return view ('vadvonews',compact('data'));
     }
 
     /**
@@ -23,7 +27,7 @@ class Cadvonews extends Controller
      */
     public function create()
     {
-        //
+        return view ('inputadvo');
     }
 
     /**
@@ -34,7 +38,17 @@ class Cadvonews extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Madvonews();
+        $data->judul = $request->judul;
+        //$data->file = $request->file;
+        $file = $request->file('file');
+        $ext = $file->getClientOriginalName();
+        //$ext = $file->getClientOriginalExtension();
+        //$newName = rand(100000,1001238912).".".$ext;
+        $file->move('uploads/file',$ext);
+        $data->file = $ext;
+        $data->save();
+        return redirect()->route('vadvonews.index')->with('alert-success','Data berhasil ditambahkan!');
     }
 
     /**
@@ -56,7 +70,9 @@ class Cadvonews extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = \App\Madvonews::findOrFail($id);
+        //data = Mphukum::where('id',$id)->get();
+        return view('updateadvo ',compact('data'));
     }
 
     /**
@@ -68,7 +84,21 @@ class Cadvonews extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Madvonews::findOrFail($id);
+        if (empty($request->file('file'))){
+            $data->file = $data->file;
+        }
+        else{
+            unlink('uploads/file/'.$data->file); //menghapus file lama
+            $data->judul = $request->judul;
+            $file = $request->file('file');
+            $ext = $file->getClientOriginalName();
+            //$newName = rand(100000,1001238912).".".$ext;
+            $file->move('uploads/file',$ext);
+            $data->file = $ext;
+        }
+        $data->save();
+        return redirect()->route('vphukum.index')->with('alert-success','Data berhasil diubah!');
     }
 
     /**
