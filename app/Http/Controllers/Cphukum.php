@@ -110,6 +110,8 @@ class Cphukum extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = \App\Mphukum::findOrFail($id);
+        $data->delete();
+        return redirect()->route('vphukum.index')->with('alert-success','Data berhasil dihapus!');
     }
 }

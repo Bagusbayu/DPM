@@ -110,6 +110,8 @@ class Cormawa extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = \App\MOrmawa::findOrFail($id);
+        $data->delete();
+        return redirect()->route('vormawa.index')->with('alert-success','Data berhasil dihapus!');
     }
 }

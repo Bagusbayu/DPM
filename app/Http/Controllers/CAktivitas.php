@@ -99,7 +99,7 @@ class CAktivitas extends Controller
             $data->file = $newName;
         }
         $data->save();
-        return redirect()->route('vaktivitas.index')->with('alert-success','Data berhasil diubah!');
+        return redirect()->route('vaktivitasdpm.index')->with('alert-success','Data berhasil diubah!');
     }
 
     /**
@@ -110,6 +110,8 @@ class CAktivitas extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = \App\Maktivitas::findOrFail($id);
+        $data->delete();
+        return redirect()->route('vaktivitasdpm.index')->with('alert-success','Data berhasil dihapus!');
     }
 }

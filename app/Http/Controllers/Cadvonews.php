@@ -121,6 +121,8 @@ class Cadvonews extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = \App\Madvonews::findOrFail($id);
+        $data->delete();
+        return redirect()->route('vadvonews.index')->with('alert-success','Data berhasil dihapus!');
     }
 }

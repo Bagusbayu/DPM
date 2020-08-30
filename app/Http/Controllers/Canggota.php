@@ -120,6 +120,8 @@ class Canggota extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = \App\Manggota::findOrFail($id);
+        $data->delete();
+        return redirect()->route('vanggota.index')->with('alert-success','Data berhasil dihapus!');
     }
 }
