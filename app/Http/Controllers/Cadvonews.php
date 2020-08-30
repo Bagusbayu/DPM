@@ -47,6 +47,12 @@ class Cadvonews extends Controller
         //$newName = rand(100000,1001238912).".".$ext;
         $file->move('uploads/file',$ext);
         $data->file = $ext;
+        
+        $file = $request->file('pict');
+        $exts = $file->getClientOriginalExtension();
+        $newName = rand(100000,1001238912).".".$exts;
+        $file->move('uploads/file',$newName);
+        $data->pict = $newName;
         $data->save();
         return redirect()->route('vadvonews.index')->with('alert-success','Data berhasil ditambahkan!');
     }
@@ -97,6 +103,11 @@ class Cadvonews extends Controller
             //$newName = rand(100000,1001238912).".".$ext;
             $file->move('uploads/file',$ext);
             $data->file = $ext;
+            $file = $request->file('pict');
+            $exts = $file->getClientOriginalExtension();
+            $newName = rand(100000,1001238912).".".$exts;
+            $file->move('uploads/file',$newName);
+            $data->pict = $newName;
         }
         $data->save();
         return redirect()->route('vadvonews.index')->with('alert-success','Data berhasil diubah!');

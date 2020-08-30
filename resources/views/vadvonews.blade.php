@@ -17,6 +17,7 @@
                     <th>No</th>
                     <th>Judul</th>
                     <th>File</th>
+                    <th>Pict</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -28,7 +29,7 @@
                         <td>{{$datas->judul}}</td>
                         <td><a href="{{ url('uploads/file/'.$datas->file) }}" type="Button" class="btn btn-link"> Download </a>
                         </td>
-                        <!-- <td><img src="{{ url('uploads/file/'.$datas->file) }}" style="width: 150px; height: 150px;"></td> -->
+                        <td><img src="{{ url('uploads/file/'.$datas->pict) }}" style="width: 150px; height: 150px;"></td>
                         <td>
                          <a href="{{ route('vadvonews.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
                             <!-- <form action="{{ route('vanggota.destroy', $datas->id) }}" method="post">

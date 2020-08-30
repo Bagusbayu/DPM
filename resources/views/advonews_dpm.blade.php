@@ -6,15 +6,14 @@
       <div class="container">
          
         <div class="row">
-          <div class="col-lg-9">
+          <div class="col-lg-12">
              <div class="section-heading">
-              
-            <!--  <a href="#">Read All News</a> -->
+             <!-- <a href="#">Read All News</a> -->
             </div>
             <div class="row">
               <div class="col-lg-6">
                 <div class="post-entry-big">
-                <h2 class="text-black">Advo News</h2>
+              <h2 class="text-black">Advo News</h2>
                   <a href="news-single.html" class="img-link"><img src="assets/images/blog_large_1.jpg" alt="Image" class="img-fluid"></a>
                   <div class="post-content">
                     <div class="post-meta"> 
@@ -65,27 +64,10 @@
               </div>
             </div>
           </div>
-          
-          <div class="col-lg-3">
-            <div class="section-heading">
-              <h2 class="text-black">Videos</h2>
-              <a href="#">View All Videos</a>
-            </div>
-            <a href="https://vimeo.com/45830194" class="video-1 mb-4" data-fancybox="" data-ratio="2">
-              <span class="play">
-                <span class="icon-play"></span>
-              </span>
-              <img src="assets/images/course_5.jpg" alt="Image" class="img-fluid">
-            </a>
-            <a href="https://vimeo.com/45830194" class="video-1 mb-4" data-fancybox="" data-ratio="2">
-                <span class="play">
-                  <span class="icon-play"></span>
-                </span>
-                <img src="assets/images/course_5.jpg" alt="Image" class="img-fluid">
-              </a>
-          </div>
+
         </div>
       </div>
     </div>
+
 
 @endsection
