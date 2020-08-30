@@ -50,7 +50,7 @@
                 <li><a href="/vormawa">Ormawa <span class="sr-only">(current)</span></a></li>
                 <li><a href="/vaspirasi">Aspirasi <span class="sr-only">(current)</span></a></li>
                 <li><a href="/vadvonews">Advo News <span class="sr-only">(current)</span></a></li>
-                <li><a href="/vadvonews">Pemira <span class="sr-only">(current)</span></a></li>
+                <li><a href="/vpemira">Pemira <span class="sr-only">(current)</span></a></li>
                  <li><a href="/logout" class="btn btn-primary">Logout</a></li>
             </ul>
         </div>

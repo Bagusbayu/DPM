@@ -50,6 +50,10 @@ Route::get('/inputormawa','Cormawa@create');
 Route::resource('vadvonews','Cadvonews');
 Route::get('/inputadvo','Cadvonews@create');
 
+Route::resource('vpemira','Cpemira');
+Route::get('/inputpemira','Cpemira@create');
+
+
 Route::resource('aspirasi_dpm','Caspirasi1');
 Route::resource('vaspirasi','Caspirasi');
 
