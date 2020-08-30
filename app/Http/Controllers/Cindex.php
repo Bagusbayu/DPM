@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mvmpoltekkes;
+use App\Madvonews;
+use App\Manggota;
+use App\MOrmawa;
 
 class Cindex extends Controller
 {
@@ -14,8 +17,11 @@ class Cindex extends Controller
      */
     public function index()
     {
+        $iya = Madvonews::orderBy('id','desc')->paginate(2);
+        $oke = Manggota::orderBy('id','asc')->paginate(3);
+        $apa = MOrmawa::orderBy('id','desc')->paginate(6);
         $data = Mvmpoltekkes::all();
-        return view ('index',compact('data'));
+        return view ('index',compact('data','iya','oke','apa'));
     }
 
     /**

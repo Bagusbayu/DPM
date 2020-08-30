@@ -131,14 +131,14 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <p class="mb-4"><img src="assets/images/logo.png" alt="Image" class="img-fluid"></p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>  
-            <p><a href="#">Learn More</a></p>
+            <p class="mb-4"><img src="assets/images/dpm144.png" alt="Image" class="img-fluid"></p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p> -->  
+            <p><a href="/vm_poltekes">Learn More</a></p>
             <div class="ml-auto">
             <div class="social-wrap">
               <a href="#"><span class="icon-facebook"></span></a>
               <a href="#"><span class="icon-twitter"></span></a>
-              <a href="#"><span class="icon-linkedin"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
 
               <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
                 class="icon-menu h3"></span></a>
@@ -148,15 +148,15 @@
           <div class="col-lg-3">
             <h3 class="footer-heading"><span>Our Campus</span></h3>
             <ul class="list-unstyled">
-                <li><a href="#">Acedemic</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Our Interns</a></li>
-                <li><a href="#">Our Leadership</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Human Resources</a></li>
+                <li><a href="/vm_poltekes">Visi Misi PolTekKes</a></li>
+                <li><a href="/vm_dpm">Visi Misi DPM</a></li>
+                <li><a href="/struktur_dpm">Struktur Anggota</a></li>
+                <li><a href="/ormawa">ORMAWA</a></li>
+                <li><a href="/produk_hukum">Produk Hukum</a></li>
+                <li><a href="/aspirasi_dpm">Feed Back</a></li>
             </ul>
           </div>
-          <div class="col-lg-3">
+          <!-- <div class="col-lg-3">
               <h3 class="footer-heading"><span>Our Courses</span></h3>
               <ul class="list-unstyled">
                   <li><a href="#">Math</a></li>
@@ -166,15 +166,15 @@
                   <li><a href="#">Business Administration</a></li>
                   <li><a href="#">Computer Science</a></li>
               </ul>
-          </div>
+          </div> -->
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Contact</span></h3>
               <ul class="list-unstyled">
                   <li><a href="#">Help Center</a></li>
-                  <li><a href="#">Support Community</a></li>
+                  <!-- <li><a href="#">Support Community</a></li>
                   <li><a href="#">Press</a></li>
                   <li><a href="#">Share Your Story</a></li>
-                  <li><a href="#">Our Supporters</a></li>
+                  <li><a href="#">Our Supporters</a></li> -->
               </ul>
           </div>
         </div>
@@ -184,7 +184,7 @@
             <div class="copyright">
                 <p>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by Ahmad Farhan</a>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i></a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
             </div>
