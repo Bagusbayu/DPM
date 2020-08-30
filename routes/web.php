@@ -64,6 +64,8 @@ Route::resource('struktur_dpm','Canggota1');
 Route::resource('ormawa','Cormawa1');
 
 Route::resource('produk_hukum','Cphukum1');
+
+Route::resource('advonews_dpm','Cadvonews1');
 //Route::get('/', function () {
 //    return view('index','Cindex');
 //});
@@ -100,6 +102,6 @@ Route::resource('produk_hukum','Cphukum1');
 Route::get('/pemira', function () {
     return view('pemira_dpm');
 });
-Route::get('/advonews', function () {
-    return view('advonews_dpm');
-});
+//Route::get('/advonews', function () {
+//    return view('advonews_dpm');
+//});

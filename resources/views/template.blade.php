@@ -97,7 +97,7 @@
                     <ul class="dropdown">
                     <li><a href="/aspirasi_dpm">Aspirasi</a></li>
                     <li><a href="/pemira">Pemira</a></li>
-                    <li><a href="/advonews">AdvoNews</a></li>
+                    <li><a href="/advonews_dpm">AdvoNews</a></li>
                   </ul>
                 </li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>
