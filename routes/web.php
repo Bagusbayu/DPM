@@ -47,6 +47,9 @@ Route::get('/inputphukum','Cphukum@create');
 Route::resource('vormawa','Cormawa');
 Route::get('/inputormawa','Cormawa@create');
 
+Route::resource('vadvonews','Cadvonews');
+Route::get('/inputadvo','Cadvonews@create');
+
 Route::resource('aspirasi_dpm','Caspirasi1');
 Route::resource('vaspirasi','Caspirasi');
 

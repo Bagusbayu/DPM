@@ -16,7 +16,7 @@ class Cadvonews extends Controller
      */
     public function index()
     {
-        $data = Madvonews::all();
+        $data = Madvonews::orderBy('id','desc')->paginate(10);
         return view ('vadvonews',compact('data'));
     }
 
@@ -71,7 +71,7 @@ class Cadvonews extends Controller
     public function edit($id)
     {
         $data = \App\Madvonews::findOrFail($id);
-        //data = Mphukum::where('id',$id)->get();
+        //$data = Madvonews::where('id',$id)->get();
         return view('updateadvo ',compact('data'));
     }
 
@@ -89,6 +89,7 @@ class Cadvonews extends Controller
             $data->file = $data->file;
         }
         else{
+            //$data = Madvonews::where('id',$id)->first();
             unlink('uploads/file/'.$data->file); //menghapus file lama
             $data->judul = $request->judul;
             $file = $request->file('file');
@@ -98,7 +99,7 @@ class Cadvonews extends Controller
             $data->file = $ext;
         }
         $data->save();
-        return redirect()->route('vphukum.index')->with('alert-success','Data berhasil diubah!');
+        return redirect()->route('vadvonews.index')->with('alert-success','Data berhasil diubah!');
     }
 
     /**
