@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mpemira;
 
 class Cpemira1 extends Controller
 {
@@ -13,7 +14,9 @@ class Cpemira1 extends Controller
      */
     public function index()
     {
-        //
+        $data = Mpemira::orderBy('id','desc')->paginate(1);
+        $iya = Mpemira::orderBy('id','desc')->paginate(3);
+        return view ('pemira_dpm',compact('data','iya'));
     }
 
     /**
