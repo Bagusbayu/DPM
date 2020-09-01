@@ -70,6 +70,8 @@ Route::resource('ormawa','Cormawa1');
 Route::resource('produk_hukum','Cphukum1');
 
 Route::resource('advonews_dpm','Cadvonews1');
+
+Route::resource('pemira_dpm','Cpemira1');
 //Route::get('/', function () {
 //    return view('index','Cindex');
 //});
@@ -103,9 +105,9 @@ Route::resource('advonews_dpm','Cadvonews1');
 //    return view('aspirasi_dpm');
 //});
 
-Route::get('/pemira', function () {
-    return view('pemira_dpm');
-});
+//Route::get('/pemira', function () {
+//    return view('pemira_dpm');
+//});
 //Route::get('/advonews', function () {
 //    return view('advonews_dpm');
 //});
