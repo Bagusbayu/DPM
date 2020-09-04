@@ -57,6 +57,7 @@ Route::get('/inputpemira','Cpemira@create');
 Route::resource('aspirasi_dpm','Caspirasi1');
 Route::resource('vaspirasi','Caspirasi');
 
+Route::resource('','Cindex');
 Route::resource('index','Cindex');
 
 Route::resource('vm_poltekes','Cvmpoltekkes1');
