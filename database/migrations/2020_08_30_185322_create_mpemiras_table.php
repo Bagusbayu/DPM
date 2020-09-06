@@ -15,9 +15,9 @@ class CreateMpemirasTable extends Migration
     {
         Schema::create('pemira', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('judul');
-            $table->text('file');
-            $table->text('pict');
+            $table->text('about');
+            $table->text('komisi');
+            $table->text('bpp');
             $table->timestamps();
         });
     }

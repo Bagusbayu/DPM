@@ -127,6 +127,8 @@ class Cpemira extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = \App\Mpemira::findOrFail($id);
+        $data->delete();
+        return redirect()->route('vpemira.index')->with('alert-success','Data berhasil dihapus!');
     }
 }

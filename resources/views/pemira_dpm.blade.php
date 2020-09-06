@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','pemira news')
+@section('title','Pemira')
 @section('content')
 <div class="news-updates site-blocks-cover">
       <div class="container">

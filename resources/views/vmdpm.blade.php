@@ -27,11 +27,12 @@
                         <td>{{$datas->visi}}</td>
                         <td>{{$datas->misi}}</td>
                         <td>
+                        <form action="{{ route('vmdpm.destroy', $datas->id) }}" method="post">
                                 <a href="{{ route('vmdpm.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
-                            <!--    {{ csrf_field() }} -->
-                            <!--   {{ method_field('DELETE') }} -->
-                            <!--    <button class="btn btn-link" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>  
-                            </form>x-->
+                             {{ csrf_field() }}
+                             {{ method_field('DELETE') }}
+                            <button class="btn btn-link" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>  
+                            </form>
                         </td>
                     </tr>
                 @endforeach

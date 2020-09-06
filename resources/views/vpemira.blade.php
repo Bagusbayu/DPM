@@ -15,9 +15,10 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Judul</th>
-                    <th>File</th>
-                    <th>Pict</th>
+                    <th>About</th>
+                    <th>Komisi</th>
+                    <th>BPP</th>
+                    
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -26,10 +27,9 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{$no++}}</td>
-                        <td>{{$datas->judul}}</td>
-                        <td><a href="{{ url('uploads/file/'.$datas->file) }}" type="Button" class="btn btn-link"> Download </a>
-                        </td>
-                        <td><img src="{{ url('uploads/file/'.$datas->pict) }}" style="width: 150px; height: 150px;"></td>
+                        <td>{{$datas->about}}</td>
+                        <td>{{$datas->komisi}}</td>
+                        <td>{{$datas->bpp}}</td>
                         <td>
                                 <form action="{{ route('vpemira.destroy', $datas->id) }}" method="post">
                                 <a href="{{ route('vpemira.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a> |

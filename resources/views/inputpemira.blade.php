@@ -13,17 +13,16 @@
         @endif
             <form role = "form" action="{{ route('vpemira.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
-                <div class = "form-group">
-                    <label for = "name">Input Judul</label>
-                    <input type = "text" class = "form-control" id="judul" placeholder = "Input Judul" name="judul">
+                <label for = "name">Input About </label>
+                    <textarea type = "text" class = "form-control" id="about" placeholder = "Input About" name="about"></textarea>
                 </div>
                 <div class = "form-group">
-                   <label for = "pict">File input</label>
-                   <input type = "file" id = "file" name="file">
+                    <label for = "misi">Input Komisi </label>
+                    <textarea type = "text" class = "form-control" id = "komisi" placeholder = "Input Komisi" name="komisi"></textarea>
                 </div>
                 <div class = "form-group">
-                   <label for = "pict">Pict input</label>
-                   <input type = "file" id = "pict" name="pict">
+                    <label for = "about">Input BPP </label>
+                    <textarea type = "text" class = "form-control" id = "bpp" placeholder = "Input BPP" name="bpp"></textarea>
                 </div>
                 <button type = "submit" class = "btn btn-default">Submit</button>
                 <a type="reset" class="btn btn-md btn-danger" href="{{route('vpemira.index')}}">Cancel</a>

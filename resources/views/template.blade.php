@@ -80,7 +80,7 @@
                   <a href="#" class="nav-link text-left">Visi Misi</a>
                   <ul class="dropdown">
                     <li><a href="/vm_poltekes">Visi Misi Poltekkes</a></li>
-                    <li><a href="/vm_dpm">Visi Misi DPM</a></li>
+                    <li><a href="/vm_dm">Visi Misi DPM</a></li>
                   </ul>
                 </li>
                 <li>

@@ -44,7 +44,7 @@ class Cadvonews extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'pict' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'pict' => 'required|file|image|mimes:jpeg,png,jpg',
         ]);
         $data = new Madvonews();
         $data->judul = $request->judul;
