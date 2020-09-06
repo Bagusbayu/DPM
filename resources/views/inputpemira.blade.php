@@ -13,6 +13,7 @@
         @endif
             <form role = "form" action="{{ route('vpemira.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
+                <div>
                 <label for = "name">Input About </label>
                     <textarea type = "text" class = "form-control" id="about" placeholder = "Input About" name="about"></textarea>
                 </div>

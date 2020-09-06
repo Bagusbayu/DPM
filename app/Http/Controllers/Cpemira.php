@@ -38,24 +38,11 @@ class Cpemira extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'pict' => 'required|file|image|mimes:jpeg,png,jpg|max:2048|dimensions:max_width=620,max_height=413',
-        ]);
-        $data = new Mpemira();
-        $data->judul = $request->judul;
-        //$data->file = $request->file;
-        $file = $request->file('file');
-        $ext = $file->getClientOriginalName();
-        //$ext = $file->getClientOriginalExtension();
-        //$newName = rand(100000,1001238912).".".$ext;
-        $file->move('uploads/file',$ext);
-        $data->file = $ext;
         
-        $file = $request->file('pict');
-        $exts = $file->getClientOriginalExtension();
-        $newName = rand(100000,1001238912).".".$exts;
-        $file->move('uploads/file',$newName);
-        $data->pict = $newName;
+        $data = new Mpemira();
+        $data->komisi = $request->komisi;
+        $data->bpp = $request->bpp;
+        $data->about = $request->about;
         $data->save();
         return redirect()->route('vpemira.index')->with('alert-success','Data berhasil ditambahkan!');
     }

@@ -18,7 +18,6 @@
                     <th>About</th>
                     <th>Komisi</th>
                     <th>BPP</th>
-                    
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -27,12 +26,12 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{$no++}}</td>
-                        <td>{{$datas->about}}</td>
-                        <td>{{$datas->komisi}}</td>
-                        <td>{{$datas->bpp}}</td>
+                        <td style="text-align:justify;">{{$datas->about}}</td>
+                        <td style="text-align:justify;">{{$datas->komisi}}</td>
+                        <td style="text-align:justify;">{{$datas->bpp}}</td>
                         <td>
                                 <form action="{{ route('vpemira.destroy', $datas->id) }}" method="post">
-                                <a href="{{ route('vpemira.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a> |
+                                <!--<a href="{{ route('vpemira.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a> | -->
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
                                 <button class="btn btn-link" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button> 
