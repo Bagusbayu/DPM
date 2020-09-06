@@ -17,12 +17,8 @@
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
                 <div class = "form-group">
-                    <label for = "nama">Input Name</label>
-                    <input type = "text" class = "form-control" id = "name" placeholder = "Input Name" name = "name" value="{{ $datas->name }}">
-                </div>
-                <div class = "form-group">
-                    <label for = "nip">Input Email</label>
-                    <input type = "text" class = "form-control" id = "email" placeholder = "Input Email" name = "email" value="{{ $datas->email }}">
+                    <label for = "username">Input User Name</label>
+                    <input type = "text" class = "form-control" id = "username" placeholder = "Input User Name" name = "username" value="{{ $datas->username }}">
                 </div>
                 <div class = "form-group">
                     <label  for = "password">Input Password</label>

@@ -16,7 +16,7 @@ class CAdminS extends Controller
      */
     public function index()
     {
-         $data = MAdminSuper::all();
+        $data = MAdminSuper::all();
         return view ('vadminsuper',compact('data'));
     }
 
@@ -40,9 +40,9 @@ class CAdminS extends Controller
     {
 
         $data = new MAdminSuper();
-        $data->email = $request->email;
+        $data->username = $request->username;
         $data->password = bcrypt($request->password);
-        $data->name = $request->name;
+        //$data->name = $request->name;
         $data->save();
         return redirect()->route('vadminsuper.index')->with('alert-success','Data berhasil ditambah!');
     }
@@ -80,9 +80,9 @@ class CAdminS extends Controller
     public function update(Request $request, $id)
     {
         $data = MAdminSuper::where('id',$id)->first();
-        $data->email = $request->email;
+        $data->username = $request->username;
         $data->password = bcrypt($request->password);
-        $data->name = $request->name;
+        //$data->name = $request->name;
         $data->save();
         return redirect()->route('vadminsuper.index')->with('alert-success','Data berhasil diubah!');
     }
@@ -96,5 +96,30 @@ class CAdminS extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function login(){
+        return view('loginadmindpm');
+    }
+     public function loginPost(Request $request){
+            $username = $request->username;
+            $password = $request->password;
+            $data = MAdminSuper::where('username',$username)->first();
+            if($data){ 
+                if(Hash::check($password, $data->password)){
+                    Session::put('usernname',$data->username);
+                    Session::put('login',TRUE);
+                    return redirect('vadminsuper');
+                }
+                else{
+                    return redirect('loginadmindpm')->with('alert','Password atau Email, Salah !'.Hash::check($password,$data->password));
+                }
+            }
+            else{
+                return redirect('loginadmindpm')->with('alert','Password atau Email, Salah!');
+            }
+        }
+    public function logout(){
+            Session::flush();
+            return redirect('loginadmindpm')->with('alert','Kamu sudah logout');
     }
 }

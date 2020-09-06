@@ -14,7 +14,7 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Name</th>
+                    <th>User Name</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -23,7 +23,7 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{$no++}}</td>
-                        <td>{{$datas->name}}</td>
+                        <td>{{$datas->username}}</td>
                         <td>
                                 <a href="{{ route('vadminsuper.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
                             <!--    {{ csrf_field() }} -->

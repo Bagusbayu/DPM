@@ -15,13 +15,10 @@
             <form role = "form" action="{{ route('vadminsuper.store') }}" method="post">
                 {{ csrf_field() }}
                 <div class = "form-group">
-                    <label for = "name">Input Name</label>
-                    <input type = "text" class = "form-control" id="name" placeholder = "Input Name" name="name">
+                    <label for = "username">Input User Name</label>
+                    <input type = "text" class = "form-control" id="username" placeholder = "Input User Name" name="username">
                 </div>
-                <div class = "form-group">
-                    <label for = "email">Input Email</label>
-                    <input type = "text" class = "form-control" id = "email" placeholder = "Input Email" name="email">
-                </div>
+                
                 <div class = "form-group">
                     <label  for = "password">Masukan Password</label>
                     <input type = "text" class = "form-control" id = "password" placeholder = "Masukan Password" name="password">

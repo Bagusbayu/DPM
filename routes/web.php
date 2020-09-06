@@ -14,13 +14,10 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-//Route::get('/loginadmins', 'CAdminSuper@index');
-//Route::post('/loginPost', 'CAdminSuper@loginPost');
-//Route::get('/logout', 'CAdminSuper@logout');
 
-Route::get('/loginadmindpm', 'CAdminDPM@login');
-Route::post('/loginPost', 'CAdminDPM@loginPost');
-Route::get('/logout', 'CAdminDPM@logout');	
+Route::get('/loginadmindpm', 'CAdminS@login');
+Route::post('/loginPost', 'CAdminS@loginPost');
+Route::get('/logout', 'CAdminS@logout');	
 
 
 Route::resource('vadminsuper','CAdminS');

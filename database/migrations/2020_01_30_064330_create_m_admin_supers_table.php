@@ -15,9 +15,8 @@ class CreateMAdminSupersTable extends Migration
     {
         Schema::create('adminsuper', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('email');
+            $table->string('username');
             $table->string('password');
-            $table->string('name');
             $table->timestamps();
         });
     }
