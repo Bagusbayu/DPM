@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\MOrmawa;
 
@@ -17,7 +16,12 @@ class Cormawa extends Controller
     public function index()
     {
         $data = MOrmawa::all();
+        if(!Session::get('loginadmindpm')){
+            return redirect('loginadmindpm')->with('alert','Kamu harus login dulu');
+        }
+        else{
         return view ('vormawa',compact('data'));
+        }
     }
 
     /**

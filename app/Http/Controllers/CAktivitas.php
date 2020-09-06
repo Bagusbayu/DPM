@@ -18,7 +18,12 @@ class CAktivitas extends Controller
     public function index()
     {
         $data = Maktivitas::orderBy('id','desc')->paginate(10);
+        if(!Session::get('loginadmindpm')){
+            return redirect('loginadmindpm')->with('alert','Kamu harus login dulu');
+        }
+        else{
         return view ('vaktivitasdpm',compact('data'));
+        }
     }
 
     /**

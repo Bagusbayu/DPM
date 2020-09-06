@@ -31,7 +31,7 @@
                 {{ csrf_field() }}
                     <div class="row">
                         <div class="col-xl-12 col-md-12">
-                            <input type="text" class="form-control" id="username" placeholder="Input User Name" name="username">
+                            <input type="text" class="form-control" id="username" placeholder="Masukan User Name" name="username">
                         </div>
                         <div class="col-xl-12 col-md-12"><br>
                             <input type="password" class="form-control" id="password" name="password" placeholder="Masukan Password">

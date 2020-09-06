@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\MAdminSuper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
-use App\MAdminSuper;
+
 
 class CAdminS extends Controller
 {
@@ -17,7 +17,12 @@ class CAdminS extends Controller
     public function index()
     {
         $data = MAdminSuper::all();
+        if(!Session::get('loginadmindpm')){
+            return redirect('loginadmindpm')->with('alert','Kamu harus login dulu');
+        }
+        else{
         return view ('vadminsuper',compact('data'));
+        }
     }
 
     /**
@@ -27,7 +32,12 @@ class CAdminS extends Controller
      */
     public function create()
     {
+        if(!Session::get('loginadmindpm')){
+            return redirect('loginadmindpm')->with('alert','Kamu harus login dulu');
+        }
+        else{
         return view ('inputadminsuper');
+    }
     }
 
     /**
@@ -107,7 +117,7 @@ class CAdminS extends Controller
             if($data){ 
                 if(Hash::check($password, $data->password)){
                     Session::put('usernname',$data->username);
-                    Session::put('login',TRUE);
+                    Session::put('loginadmindpm',TRUE);
                     return redirect('vadminsuper');
                 }
                 else{

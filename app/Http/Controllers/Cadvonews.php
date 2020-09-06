@@ -17,7 +17,12 @@ class Cadvonews extends Controller
     public function index()
     {
         $data = Madvonews::orderBy('id','desc')->paginate(10);
+        if(!Session::get('loginadmindpm')){
+            return redirect('loginadmindpm')->with('alert','Kamu harus login dulu');
+        }
+        else{        
         return view ('vadvonews',compact('data'));
+    }
     }
 
     /**
@@ -39,7 +44,7 @@ class Cadvonews extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'pict' => 'required|file|image|mimes:jpeg,png,jpg|max:2048|dimensions:max_width=620,max_height=413',
+            'pict' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
         ]);
         $data = new Madvonews();
         $data->judul = $request->judul;
