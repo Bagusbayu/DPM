@@ -32,12 +32,12 @@ class CAdminS extends Controller
      */
     public function create()
     {
-        if(!Session::get('loginadmindpm')){
-            return redirect('loginadmindpm')->with('alert','Kamu harus login dulu');
-        }
-        else{
+       // if(!Session::get('loginadmindpm')){
+       //     return redirect('loginadmindpm')->with('alert','Kamu harus login dulu');
+       // }
+       // else{
         return view ('inputadminsuper');
-    }
+    //}
     }
 
     /**

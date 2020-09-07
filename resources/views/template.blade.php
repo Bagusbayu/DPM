@@ -81,6 +81,7 @@
                   <ul class="dropdown">
                     <li><a href="/vm_poltekes">Visi Misi Poltekkes</a></li>
                     <li><a href="/vm_dm">Visi Misi DPM</a></li>
+                    <li><a href="/pemira_dpm" class="nav-link text-left">Pemira</a></li>
                   </ul>
                 </li>
                 <li>
@@ -96,7 +97,7 @@
                     <a href="#" class="nav-link text-left">Aktifitas DPM</a>
                     <ul class="dropdown">
                     <li><a href="/aspirasi_dpm">Aspirasi</a></li>
-                    <li><a href="/pemira_dpm">Pemira</a></li>
+                    <li><a href="/aktivitas">Aktifitas DPM</a></li>
                     <li><a href="/advonews_dpm">AdvoNews</a></li>
                   </ul>
                 </li>

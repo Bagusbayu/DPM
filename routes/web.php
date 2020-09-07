@@ -70,6 +70,8 @@ Route::resource('produk_hukum','Cphukum1');
 Route::resource('advonews_dpm','Cadvonews1');
 
 Route::resource('pemira_dpm','Cpemira1');
+
+Route::resource('aktivitas_dpm','Caktivitas1');
 //Route::get('/', function () {
 //    return view('index','Cindex');
 //});

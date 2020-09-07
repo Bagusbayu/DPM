@@ -12,32 +12,28 @@
                     </ul>
                 </div>
         @endif
-                <form role = "form" action="{{ route('vpemira.update', $data->id) }}" method="post" enctype="multipart/form-data">
+        @foreach($data as $datas)
+                <form role = "form" action="{{ route('vpemira.update', $data->id) }}" method="post">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
-                    <div class = "form-group">
-                    <label for = "nama">Input Judul</label>
-                    <input type = "text" class = "form-control" id = "judul" placeholder = "Input Judul" name = "judul" value="{{ $data->judul }}">
-                </div><div class="form-group">
-                        <label for="picto">File Lama:</label>
-                        <a src="{{ url('uploads/file/'.$data->file) }}">File lama</a>
-                        <!-- <img src="{{ url('uploads/file/'.$data->file) }}" style="width: 150px; height: 150px;"> -->
-                    </div>
-                    <div class = "form-group">
-                        <label for = "pict">File input</label>
-                        <input type = "file" id = "file" name="file">
-                    </div>
-                    <div class="form-group">
-                        <label for="picto">Foto Lama:</label>
-                        <img src="{{ url('uploads/file/'.$data->pict) }}" style="width: 150px; height: 150px;">
-                    </div>
-                    <div class = "form-group">
-                        <label for = "pict">File input</label>
-                        <input type = "file" id = "pict" name="pict">
-                    </div>
+                <div class = "form-group">
+                    <label for = "about">Input About</label>
+                    <input type = "text" class = "form-control" id = "misi" placeholder = "Input About" name = "about" value="{{ $datas->about }}">
+                </div>
+                  
+                <div class = "form-group">
+                    <label for = "misi">Input komisi</label>
+                    <input type = "text" class = "form-control" id = "komisi" placeholder = "Input komisi" name = "komisi" value="{{ $datas->komisi }}">
+                </div>
+                <div class = "form-group">
+                    <label for = "nama">Input bpp</label>
+                    <input type = "text" class = "form-control" id = "bpp" placeholder = "Input bpp" name = "bpp" value="{{ $datas->bpp }}">
+                </div>
+                
                     <button type = "submit" class = "btn btn-default">Submit</button>
                     <a type="reset" class="btn btn-md btn-danger" href="{{route('vpemira.index')}}">Cancel</a>
                 </form>
+                 @endforeach
         </div>
 
     </section>

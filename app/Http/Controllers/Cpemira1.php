@@ -14,9 +14,9 @@ class Cpemira1 extends Controller
      */
     public function index()
     {
-        $data = Mpemira::orderBy('id','desc')->paginate(1);
-        $iya = Mpemira::orderBy('id','desc')->paginate(3);
-        return view ('pemira_dpm',compact('data','iya'));
+        $data = Mpemira::all();
+        //$iya = Mpemira::orderBy('id','desc')->paginate(3);
+        return view ('pemira_dpm',compact('data'));
     }
 
     /**

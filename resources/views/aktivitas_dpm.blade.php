@@ -13,6 +13,7 @@
       </div> 
       <div class="site-section">
         <div class="container">
+        @foreach($data as $datas)
             <div class="row mb-5">
                 <div class="col-lg-6 mb-lg-0 mb-4">
                     <img src="assets/images/course_6.jpg" alt="Image" class="img-fluid"> 
@@ -34,9 +35,9 @@
                     </ol>
 
                 </div>
-            </div>
+            </div>@endforeach
 
-            <div class="row">
+           <!-- <div class="row">
                     <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
                         <img src="assets/images/course_3.jpg" alt="Image" class="img-fluid"> 
                     </div>
@@ -55,7 +56,7 @@
                                 <li>1×1 picture</li>
                             </ol>
                     </div>
-                </div>
+                </div> -->
         </div>
     </div>
 

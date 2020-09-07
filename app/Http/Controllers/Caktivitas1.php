@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
-use App\Mpemira;
+use App\Maktivitas;
 
-class Cpemira extends Controller
+class Caktivitas1 extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,9 @@ class Cpemira extends Controller
      */
     public function index()
     {
-        $data = Mpemira::all();
-        return view ('vpemira',compact('data'));
+        $data = Maktivitas::orderBy('id','desc')->paginate(2);
+        //$iya = Madvonews::orderBy('id','desc')->paginate(3);
+        return view ('aktivitas_dpm',compact('data'));
     }
 
     /**
@@ -27,7 +26,7 @@ class Cpemira extends Controller
      */
     public function create()
     {
-        return view ('inputpemira');
+        //
     }
 
     /**
@@ -38,13 +37,7 @@ class Cpemira extends Controller
      */
     public function store(Request $request)
     {
-        
-        $data = new Mpemira();
-        $data->komisi = $request->komisi;
-        $data->bpp = $request->bpp;
-        $data->about = $request->about;
-        $data->save();
-        return redirect()->route('vpemira.index')->with('alert-success','Data berhasil ditambahkan!');
+        //
     }
 
     /**
@@ -66,9 +59,7 @@ class Cpemira extends Controller
      */
     public function edit($id)
     {
-        //$data = \App\Mpemira::findOrFail($id);
-        $data = Mpemira::where('id',$id)->get();
-        return view('updatepmira ',compact('data'));
+        //
     }
 
     /**
@@ -80,12 +71,7 @@ class Cpemira extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Mpemira::where('id',$id)->first();
-        $data->bpp = $request->bpp;
-        $data->komisi = $request->komisi;
-        $data->about = $request->about;
-        $data->save();
-        return redirect()->route('vpemira.index')->with('alert-success','Data berhasil diubah!');
+        //
     }
 
     /**
@@ -96,8 +82,6 @@ class Cpemira extends Controller
      */
     public function destroy($id)
     {
-        $data = \App\Mpemira::findOrFail($id);
-        $data->delete();
-        return redirect()->route('vpemira.index')->with('alert-success','Data berhasil dihapus!');
+        //
     }
 }

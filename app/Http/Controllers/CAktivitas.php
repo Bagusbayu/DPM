@@ -90,13 +90,14 @@ class CAktivitas extends Controller
     public function update(Request $request, $id)
     {
         $data = Maktivitas::findOrFail($id);
+        $data->judul = $request->judul;
+        $data->deskripsi = $request->deskripsi;
         if (empty($request->file('file'))){
             $data->file = $data->file;
         }
         else{
             unlink('uploads/file/'.$data->file); //menghapus file lama
-            $data->judul = $request->judul;
-            $data->deskripsi = $request->deskripsi;
+            
             $file = $request->file('file');
             $ext = $file->getClientOriginalExtension();
             $newName = rand(100000,1001238912).".".$ext;

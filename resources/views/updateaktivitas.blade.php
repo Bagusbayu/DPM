@@ -17,11 +17,11 @@
                     {{ method_field('PUT') }}
                     <div class = "form-group">
                     <label for = "judul">Input judul</label>
-                    <input type = "judul" class = "form-control" id = "judul" placeholder = "Input judul" name = "judul" value="{{ $data->judul }}">
+                    <input type = "text" class = "form-control" id = "judul" placeholder = "Input judul" name = "judul" value="{{ $data->judul }}">
                 </div>
 				<div class = "form-group">
                     <label for = "Deskripsi">Input Deskripsi</label>
-                    <input type = "Deskripsi" class = "form-control" id = "Deskripsi" placeholder = "Input Deskripsi" name = "Deskripsi" value="{{ $data->deskripsi }}">
+                    <input type = "text" class = "form-control" id = "deskripsi" placeholder = "Input Deskripsi" name = "deskripsi" value="{{ $data->deskripsi }}">
                 </div>
                 <div class="form-group">
                         <label for="picto">File Lama:</label>

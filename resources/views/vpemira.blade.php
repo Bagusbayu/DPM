@@ -31,7 +31,7 @@
                         <td style="text-align:justify;">{{$datas->bpp}}</td>
                         <td>
                                 <form action="{{ route('vpemira.destroy', $datas->id) }}" method="post">
-                                <!--<a href="{{ route('vpemira.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a> | -->
+                                <a href="{{ route('vpemira.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a> | 
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
                                 <button class="btn btn-link" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button> 
@@ -41,9 +41,6 @@
                     @endforeach
                 </tbody>
             </table>
-            <div class="text-center">
-                {!! $data->links(); !!}
-            </div>
         </div>
     </section>
 
