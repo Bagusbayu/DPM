@@ -16,23 +16,23 @@
         @foreach($data as $datas)
             <div class="row mb-5">
                 <div class="col-lg-6 mb-lg-0 mb-4">
-                    <img src="assets/images/course_6.jpg" alt="Image" class="img-fluid"> 
+                    <img src="{{ url('uploads/file/'.$datas->file) }}" alt="Image" class="img-fluid"> 
                 </div>
                 <div class="col-lg-5 ml-auto align-self-center">
                     <h2 class="section-title-underline mb-5">
-                        <span>College Requirements</span>
+                        <span>{{$datas->judul}}</span>
                     </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque dolore libero corrupti! Itaque, delectus?</p>
-                    <p>Modi sit dolor repellat esse! Sed necessitatibus itaque libero odit placeat nesciunt, voluptatum totam facere.</p>
+                    <p>{{$datas->deskripsi}}</p>
+                    
 
-                    <ol class="ul-check primary list-unstyled">
+                    <!-- <ol class="ul-check primary list-unstyled">
                         <li>Accomplished Application Form</li>
                         <li>High School Report Card </li>
                         <li>High School Transcript</li>
                         <li>Certificate of Good Moral Characte</li>
                         <li>2×2 picture</li>
                         <li>1×1 picture</li>
-                    </ol>
+                    </ol> -->
 
                 </div>
             </div>@endforeach
