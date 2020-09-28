@@ -44,8 +44,13 @@
                     </div>
                   </div>
                 </div>
+
                 @endforeach
+                <div class="d-flex justify-content-center">
+                {!! $iya->links(); !!}
+                </div>
               </div>
+
             </div>
           </div>
 

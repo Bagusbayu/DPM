@@ -14,7 +14,7 @@ class Cphukum1 extends Controller
      */
     public function index()
     {
-        $data = Mphukum::orderBy('id','desc')->paginate(10);
+        $data = Mphukum::orderBy('id','desc')->paginate(1);
         return view ('produk_hukum',compact('data'));
     }
 

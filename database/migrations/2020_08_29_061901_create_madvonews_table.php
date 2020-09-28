@@ -17,7 +17,6 @@ class CreateMadvonewsTable extends Migration
             $table->bigIncrements('id');
             $table->text('judul');
             $table->text('file');
-            $table->text('pict');
             $table->timestamps();
         });
     }

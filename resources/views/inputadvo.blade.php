@@ -21,10 +21,7 @@
                    <label for = "pict">File input</label>
                    <input type = "file" id = "file" name="file">
                 </div>
-                <div class = "form-group">
-                   <label for = "pict">Pict input</label>
-                   <input type = "file" id = "pict" name="pict">
-                </div>
+                
                 <button type = "submit" class = "btn btn-default">Submit</button>
                 <a type="reset" class="btn btn-md btn-danger" href="{{route('vadvonews.index')}}">Cancel</a>
             </form>

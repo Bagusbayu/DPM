@@ -43,9 +43,6 @@ class Cadvonews extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'pict' => 'required|file|image|mimes:jpeg,png,jpg',
-        ]);
         $data = new Madvonews();
         $data->judul = $request->judul;
         //$data->file = $request->file;
@@ -55,12 +52,6 @@ class Cadvonews extends Controller
         //$newName = rand(100000,1001238912).".".$ext;
         $file->move('uploads/file',$ext);
         $data->file = $ext;
-        
-        $file = $request->file('pict');
-        $exts = $file->getClientOriginalExtension();
-        $newName = rand(100000,1001238912).".".$exts;
-        $file->move('uploads/file',$newName);
-        $data->pict = $newName;
         $data->save();
         return redirect()->route('vadvonews.index')->with('alert-success','Data berhasil ditambahkan!');
     }
@@ -99,26 +90,22 @@ class Cadvonews extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'pict' => 'required|file|image|mimes:jpeg,png,jpg|max:2048|dimensions:max_width=620,max_height=413',
+            'pict' => 'file|image|mimes:jpeg,png,jpg|max:2048',
         ]);
         $data = Madvonews::findOrFail($id);
+        $data->judul = $request->judul;
         if (empty($request->file('file'))){
             $data->file = $data->file;
         }
         else{
             //$data = Madvonews::where('id',$id)->first();
             unlink('uploads/file/'.$data->file); //menghapus file lama
-            $data->judul = $request->judul;
+            
             $file = $request->file('file');
             $ext = $file->getClientOriginalName();
             //$newName = rand(100000,1001238912).".".$ext;
             $file->move('uploads/file',$ext);
             $data->file = $ext;
-            $file = $request->file('pict');
-            $exts = $file->getClientOriginalExtension();
-            $newName = rand(100000,1001238912).".".$exts;
-            $file->move('uploads/file',$newName);
-            $data->pict = $newName;
         }
         $data->save();
         return redirect()->route('vadvonews.index')->with('alert-success','Data berhasil diubah!');

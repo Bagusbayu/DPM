@@ -95,18 +95,25 @@ class Canggota extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'pict' => 'file|image|mimes:jpeg,png,jpg',
+        ]);
         //$data = Manggota::where('id',$id)->first();
         $data = Manggota::findOrFail($id);
+        $data->nama = $request->nama;
+            $data->jurusan = $request->jurusan;
+            $data->angkatan = $request->angkatan;
+            $data->jabatan = $request->jabatan;
         if (empty($request->file('pict'))){
             $data->pict = $data->pict;
         }
         else{
             //$data = Manggota::where('id',$id)->first();
             unlink('uploads/file/'.$data->pict); //menghapus file lama
-            $data->nama = $request->nama;
-            $data->jurusan = $request->jurusan;
-            $data->angkatan = $request->angkatan;
-            $data->jabatan = $request->jabatan;
+            //$data->nama = $request->nama;
+            //$data->jurusan = $request->jurusan;
+            //$data->angkatan = $request->angkatan;
+            //$data->jabatan = $request->jabatan;
             $file = $request->file('pict');
             $ext = $file->getClientOriginalExtension();
             $newName = rand(100000,1001238912).".".$ext;

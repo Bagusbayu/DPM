@@ -86,12 +86,13 @@ class Cphukum extends Controller
     public function update(Request $request, $id)
     {
         $data = Mphukum::findOrFail($id);
+        $data->nama = $request->nama;
         if (empty($request->file('file'))){
             $data->file = $data->file;
         }
         else{
             unlink('uploads/file/'.$data->file); //menghapus file lama
-            $data->nama = $request->nama;
+            
             $file = $request->file('file');
             $ext = $file->getClientOriginalName();
             //$newName = rand(100000,1001238912).".".$ext;

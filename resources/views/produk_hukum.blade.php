@@ -26,8 +26,11 @@
             </div>
           </div>
           <div class="col-lg-2 col-md-3">
+
          </div>
+
         @endforeach
+
         </div>
 
 
@@ -66,11 +69,15 @@
           <div class="col-lg-2 col-md-3">
          </div>
         </div>
--->
+
             <div class="text-center">
                 {!! $data->links(); !!}
-            </div>
+            </div>-->
         
       </div>
+
     </div>
+    <div class="d-flex justify-content-center">
+                {!! $data->links(); !!}
+            </div>
     @endsection

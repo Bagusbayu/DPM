@@ -69,10 +69,13 @@
             <a href="/index" class="d-block">
               <img src="assets/images/dpm144.png" alt="Image" class="img-fluid">
             </a>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
           </div>
+
           <div class="mr-auto">
             <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block" style="padding-left: 0 ! important;">
                 <li class="active">
                   <a href="/index" class="nav-link text-left">Beranda</a>
                 </li>
@@ -81,14 +84,16 @@
                   <ul class="dropdown">
                     <li><a href="/vm_poltekes">Visi Misi Poltekkes</a></li>
                     <li><a href="/vm_dm">Visi Misi DPM</a></li>
-                    <li><a href="/pemira_dpm" class="nav-link text-left">Pemira</a></li>
+                    
                   </ul>
                 </li>
                 <li>
+                <li><a href="/pemira_dpm" class="nav-link text-left">Pemira</a>
+                </li>
                   <a href="/struktur_dpm" class="nav-link text-left">Profile Struktur Anggota</a>
                 </li>
                 <li>
-                  <a href="/ormawa" class="nav-link text-left">ORMAWA</a>
+                  <a href="/ormawa" class="nav-link text-left">KBM</a>
                 </li>
                 <li>
                     <a href="/produk_hukum" class="nav-link text-left">Produk Hukum</a>
