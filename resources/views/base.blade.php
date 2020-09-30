@@ -22,6 +22,7 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdn.ckeditor.com/4.15.0/basic/ckeditor.js"></script>
 
 </head>
 <body>
@@ -78,4 +79,19 @@
 </nav>
 
 </body>
+<!-- <script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script> -->
+<!-- <script>
+        CKEDITOR.replace( 'summary-ckeditor' );
+</script> -->
+<!--<script>
+  var konten = document.getElementById("konten");
+    CKEDITOR.replace(konten,{
+    language:'en-gb'
+  });
+  CKEDITOR.config.allowedContent = true;
+</script> -->
 </html>

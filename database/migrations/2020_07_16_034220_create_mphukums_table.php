@@ -17,6 +17,9 @@ class CreateMphukumsTable extends Migration
             $table->bigIncrements('id');
             $table->text('nama');
             $table->text('file');
+            $table->string('tahun');
+            $table->string('jenis');
+            $table->string('status');
             $table->timestamps();
         });
     }

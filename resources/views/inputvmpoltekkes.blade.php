@@ -23,7 +23,7 @@
                 </div>
                 <div class = "form-group">
                     <label for = "about">Input About </label>
-                    <textarea type = "text" class = "form-control" id = "about" placeholder = "Input About" name="about"></textarea>
+                    <textarea type = "text" class="ckeditor form-control" id = "about" placeholder = "Input About" name="about"></textarea>
                 </div><!--
                 <div class = "form-group">
                     <label  for = "password">Masukan Password</label>

@@ -17,12 +17,12 @@ class CAdminS extends Controller
     public function index()
     {
         $data = MAdminSuper::all();
-        if(!Session::get('loginadmindpm')){
-            return redirect('loginadmindpm')->with('alert','Kamu harus login dulu');
-        }
-        else{
+        //if(!Session::get('loginadmindpm')){
+        //    return redirect('loginadmindpm')->with('alert','Kamu harus login dulu');
+        //}
+        //else{
         return view ('vadminsuper',compact('data'));
-        }
+        //}
     }
 
     /**
