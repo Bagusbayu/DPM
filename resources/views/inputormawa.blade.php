@@ -14,17 +14,20 @@
             <form role = "form" action="{{ route('vormawa.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class = "form-group">
-                    <label for = "judul">Input Nama</label>
-                    <input type = "text" class = "form-control" id="nama" placeholder = "Input Nama" name="nama">
+                    <label for = "judul">Input About</label>
+                    <textarea type = "text" class = "ckeditor form-control" id="about" placeholder = "Input Nama" name="about"></textarea>
                 </div>
                 <div class = "form-group">
-                    <label for = "Deskripsi">Input Deskripsi</label>
-                    <textarea type = "text" class = "form-control" id="deskripsi" placeholder = "Input Deskripsi" name="deskripsi"></textarea>
+                    <label for = "Deskripsi">Input Arti</label>
+                    <textarea type = "text" class = "ckeditor form-control" id="arti" placeholder = "Input Deskripsi" name="arti"></textarea>
                 </div>
                 <div class = "form-group">
-                   <label for = "pict">Input Image</label><br>
-                   <label for = "pict">Max Width : 800, Max Height : 494</label>
-                   <input type = "file" id = "file" name="file">
+                    <label for = "judul">Input Visi</label>
+                    <textarea type = "text" class = "ckeditor form-control" id="visi" placeholder = "Input Nama" name="visi"></textarea>
+                </div>
+                <div class = "form-group">
+                    <label for = "Deskripsi">Input Misi</label>
+                    <textarea type = "text" class = "ckeditor form-control" id="misi" placeholder = "Input Deskripsi" name="misi"></textarea>
                 </div>
                 <button type = "submit" class = "btn btn-default">Submit</button>
                 <a type="reset" class="btn btn-md btn-danger" href="{{route('vormawa.index')}}">Cancel</a>

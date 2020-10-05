@@ -15,9 +15,10 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama</th>
-                    <th>Deskripsi</th>
-                    <th>Image</th>
+                    <th>About</th>
+                    <th>Arti</th>
+                    <th>Visi</th>
+                    <th>Misi</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -26,9 +27,10 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{$no++}}</td>
-                        <td>{{$datas->nama}}</td>
-                        <td>{{$datas->deskripsi}}</td>
-                        <td><img src="{{ url('uploads/file/'.$datas->file) }}" style="width: 150px; height: 150px;"></td>
+                        <td>{{$datas->about}}</td>
+                        <td>{{$datas->arti}}</td>
+                        <td>{{$datas->visi}}</td>
+                        <td>{{$datas->misi}}</td>
                         <td>
                         <form action="{{ route('vormawa.destroy', $datas->id) }}" method="post">
                         <a href="{{ route('vormawa.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>|
