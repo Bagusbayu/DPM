@@ -41,6 +41,7 @@ class Cvmdpm extends Controller
         $data = new Mvmdpm();
         $data->visi = $request->visi;
         $data->misi = $request->misi;
+        $data->about = $request->about;
         $data->save();
         return redirect()->route('vmdpm.index')->with('alert-success','Data berhasil ditambah!');
     }
@@ -80,6 +81,7 @@ class Cvmdpm extends Controller
         $data = Mvmdpm::where('id',$id)->first();
         $data->visi = $request->visi;
         $data->misi = $request->misi;
+        $data->about = $request->about;
         $data->save();
         return redirect()->route('vmdpm.index')->with('alert-success','Data berhasil diubah!');
     }

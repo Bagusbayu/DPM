@@ -63,7 +63,8 @@ Route::resource('vm_dm','Cvmdpm1');
 
 Route::resource('struktur_dpm','Canggota1');
 
-Route::resource('ormawa','Cormawa1');
+//Route::resource('ormawa','Cormawa1');
+Route::resource('kbm','Cormawa1');
 
 Route::resource('produk_hukum','Cphukum1');
 

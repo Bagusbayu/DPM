@@ -93,7 +93,7 @@
                   <a href="/struktur_dpm" class="nav-link text-left">Profile Struktur Anggota</a>
                 </li>
                 <li>
-                  <a href="/ormawa" class="nav-link text-left">KBM</a>
+                  <a href="/kbm" class="nav-link text-left">KBM</a>
                 </li>
                 <li>
                     <a href="/produk_hukum" class="nav-link text-left">Produk Hukum</a>
@@ -157,7 +157,7 @@
                 <li><a href="/vm_poltekes">Visi Misi PolTekKes</a></li>
                 <li><a href="/vm_dpm">Visi Misi DPM</a></li>
                 <li><a href="/struktur_dpm">Struktur Anggota</a></li>
-                <li><a href="/ormawa">ORMAWA</a></li>
+                <li><a href="/kbm">ORMAWA</a></li>
                 <li><a href="/produk_hukum">Produk Hukum</a></li>
                 <li><a href="/aspirasi_dpm">Feed Back</a></li>
             </ul>

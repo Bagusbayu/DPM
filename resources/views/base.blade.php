@@ -84,9 +84,9 @@
         $('.ckeditor').ckeditor();
     });
 </script> -->
-<!-- <script>
+ <script>
         CKEDITOR.replace( 'summary-ckeditor' );
-</script> -->
+</script>
 <!--<script>
   var konten = document.getElementById("konten");
     CKEDITOR.replace(konten,{

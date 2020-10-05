@@ -15,9 +15,10 @@ class CreateMOrmawasTable extends Migration
     {
         Schema::create('ormawa', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('nama');
-            $table->text('deskripsi');
-            $table->text('file');
+            $table->text('about');
+            $table->text('arti');
+            $table->text('visi');
+            $table->text('misi');
             $table->timestamps();
         });
     }

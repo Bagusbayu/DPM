@@ -42,17 +42,11 @@ class Cormawa extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048|dimensions:max_width=800,max_height=494',
-        ]);
         $data = new MOrmawa();
-        $data->nama = $request->nama;
-        $data->deskripsi = $request->deskripsi;
-        $file = $request->file('file');
-        $ext = $file->getClientOriginalExtension();
-        $newName = rand(100000,1001238912).".".$ext;
-        $file->move('uploads/file',$newName);
-        $data->file = $newName;
+        $data->arti = $request->arti;
+        $data->visi = $request->visi;
+        $data->misi = $request->misi;
+        $data->about = $request->about;
         $data->save();
         return redirect()->route('vormawa.index')->with('alert-success','Data berhasil ditambahkan!');
     }
@@ -76,8 +70,8 @@ class Cormawa extends Controller
      */
     public function edit($id)
     {
-        $data = \App\MOrmawa::findOrFail($id);
-        //$data = MOrmawa::where('id',$id)->get();
+        //$data = \App\MOrmawa::findOrFail($id);
+        $data = MOrmawa::where('id',$id)->get();
         return view('updateormawa',compact('data'));
     }
 
@@ -90,21 +84,11 @@ class Cormawa extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = MOrmawa::findOrFail($id);
-        if (empty($request->file('file'))){
-            $data->file = $data->file;
-        }
-        else{
-            //$data = MOrmawa::where('id',$id)->first();
-            unlink('uploads/file/'.$data->file); //menghapus file lama
-            $data->nama = $request->nama;
-            $data->deskripsi = $request->deskripsi;
-            $file = $request->file('file');
-            $ext = $file->getClientOriginalExtension();
-            $newName = rand(100000,1001238912).".".$ext;
-            $file->move('uploads/file',$newName);
-            $data->file = $newName;
-        }
+       $data = MOrmawa::where('id',$id)->first();
+        $data->visi = $request->visi;
+        $data->misi = $request->misi;
+        $data->about = $request->about;
+        $data->arti = $request->arti;
         $data->save();
         return redirect()->route('vormawa.index')->with('alert-success','Data berhasil diubah!');
     }
