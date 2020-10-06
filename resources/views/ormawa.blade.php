@@ -5,109 +5,99 @@
         <div class="container">
           <div class="row align-items-end">
             <div class="col-lg-7">
-              <h2 class="mb-0">ORMAWA</h2>
-              <p>daftar ORMAWA</p>
+              <h2 class="mb-0">KBM</h2>
+              <p>Keluarga Besar Mahasiswa.</p>
             </div>
           </div>
         </div>
       </div> 
 
 
-      <div class="site-section"> 
+    <div class="site-section">
         <div class="container">
-       
-            <div class="row">
-            @foreach($data as $datas)
-                <div class="col-lg-4 col-md-6 mb-4">
-                
-                    <div class="course-1-item">
-                        <figure class="thumnail">
-                        <a href="course-single.html"><img src="{{ url('uploads/file/'.$datas->file) }}" alt="Image" class="img-fluid" style="width:349.98px;height:233.13px;"></a>
-                        
-                        <div class="category"><h3><center>{{$datas->nama}}</center></h3></div>  
-                        </figure>
-                        <div class="course-1-content pb-4">
-                        <h2><p class="desc mb-4">{{$datas->deskripsi}}</p></h2>
+        @foreach($data as $datas)
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-lg-0 mb-4">
+                    <img src="assets/images/course_4.jpg" alt="Image" class="img-fluid"> 
+                </div>
+                <div class="col-lg-5 ml-auto align-self-center">
+                    <h2 class="section-title-underline mb-5">
+                        <span>About KBM</span>
+                    </h2>
+                    <p>{!!$datas->about!!}</p>
+                    <p>.</p>
+                </div>
+            </div>
 
-                        </div>
+            <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
+                        <img src="assets/images/course_5.jpg" alt="Image" class="img-fluid"> 
                     </div>
-                    
+                    <div class="col-lg-5 mr-auto align-self-center order-2 order-lg-1">
+                        <h2 class="section-title-underline mb-5">
+                            <span>Arti Keseluruhan</span>
+                        </h2>
+                        <p>{!!$datas->arti!!}</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                <div class="col-lg-6 mb-lg-0 mb-4">
+                    <img src="assets/images/course_4.jpg" alt="Image" class="img-fluid"> 
+                </div>
+                <div class="col-lg-5 ml-auto align-self-center">
+                    <h2 class="section-title-underline mb-5">
+                        <span>Visi</span>
+                    </h2>
+                    <p>{!!$datas->visi!!}</p>
+                    <p>.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
+                        <img src="assets/images/course_5.jpg" alt="Image" class="img-fluid"> 
+                    </div>
+                    <div class="col-lg-5 mr-auto align-self-center order-2 order-lg-1">
+                        <h2 class="section-title-underline mb-5">
+                            <span>Misi DPM</span>
+                        </h2>
+                        <p>{!!$datas->misi!!}</p>
+                        <p></p>
+                    </div>
                 </div>
                 @endforeach
- <!--               <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-1-item">
-                        <figure class="thumnail">
-                        <a href="course-single.html"><img src="assets/images/course_2.jpg" alt="Image" class="img-fluid"></a>
-                        
-                        <div class="category"><h3><center>Anggota Unknown</center></h3></div>  
-                        </figure>
-                        <div class="course-1-content pb-4">
-                        <h2><p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p></h2>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-1-item">
-                        <figure class="thumnail">
-                        <a href="course-single.html"><img src="assets/images/course_3.jpg" alt="Image" class="img-fluid"></a>
-                        
-                        <div class="category"><h3><center>Anggota Unknown</center></h3></div>  
-                        </figure>
-                        <div class="course-1-content pb-4">
-                        <h2><p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p></h2>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-1-item">
-                        <figure class="thumnail">
-                        <a href="course-single.html"><img src="assets/images/course_4.jpg" alt="Image" class="img-fluid"></a>
-                        
-                        <div class="category"><h3><center>Anggota Unknown</center></h3></div>  
-                        </figure>
-                        <div class="course-1-content pb-4">
-                        <h2><p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p></h2>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-1-item">
-                        <figure class="thumnail">
-                        <a href="course-single.html"><img src="assets/images/course_5.jpg" alt="Image" class="img-fluid"></a>
-                        
-                        <div class="category"><h3><center>Anggota Unknown</center></h3></div>  
-                        </figure>
-                        <div class="course-1-content pb-4">
-                        <h2><p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p></h2>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-1-item">
-                        <figure class="thumnail">
-                        <a href="course-single.html"><img src="assets/images/course_6.jpg" alt="Image" class="img-fluid"></a>
-                        
-                        <div class="category"><h3><center>Anggota Unknown</center></h3></div>  
-                        </figure>
-                        <div class="course-1-content pb-4">
-                        <h2><p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p></h2>
-
-                        </div>
-                    </div>
-                </div> -->
-               
-
-            </div>
         </div>
-     </div>
+    </div>
+<!--
+    <div class="section-bg style-1" style="background-image: url('assets/images/hero_1.jpg');">
+        <div class="container">
+        <div class="col-lg-5 ml-auto align-self-center">
+                    <h2 class="section-title-underline mb-5">
+                        <span>Misi / slogan ber ikon DPM</span>
+                    </h2>
+                    
+                </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-mortarboard"></span>
+              <h3>Our Philosphy</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea? Dolore, amet reprehenderit.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-school-material"></span>
+              <h3>Academics Principle</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+                Dolore, amet reprehenderit.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-library"></span>
+              <h3>Key of Success</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+                Dolore, amet reprehenderit.</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
 
 @endsection

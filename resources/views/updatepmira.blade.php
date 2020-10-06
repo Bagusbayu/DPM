@@ -13,7 +13,7 @@
                 </div>
         @endif
         @foreach($data as $datas)
-                <form role = "form" action="{{ route('vpemira.update', $data->id) }}" method="post">
+                <form role = "form" action="{{ route('vpemira.update', $datas->id) }}" method="post">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
                 <div class = "form-group">
