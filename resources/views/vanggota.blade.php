@@ -39,7 +39,7 @@
                          |      {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
                                 <button class="btn btn-link" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button> 
-                            </form> -->
+                            </form> 
                         </td>
                     </tr>
                     @endforeach

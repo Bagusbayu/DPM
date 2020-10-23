@@ -19,6 +19,7 @@ class CreateMAspirasisTable extends Migration
             $table->text('nim');
             $table->text('email');
             $table->text('jurusan');
+            $table->text('prodi');
             $table->text('angkatan');
             $table->text('message');
             $table->timestamps();

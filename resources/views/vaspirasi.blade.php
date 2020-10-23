@@ -19,6 +19,7 @@
                     <th>NIM</th>
                     <th>Email</th>
                     <th>Jurusan</th>
+                    <th>Program Studi</th>
                     <th>Angkatan</th>
                     <th>Message</th>
                     <!-- <th>Action</th> -->
@@ -33,6 +34,7 @@
                         <td>{{$datas->nim}}</td>
                         <td>{{$datas->email}}</td>
                         <td>{{$datas->jurusan}}</td>
+                        <td>{{$datas->prodi}}</td>
                         <td>{{$datas->angkatan}}</td>
                         <td>{{$datas->message}}</td>
                         <td>

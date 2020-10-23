@@ -568,6 +568,7 @@ h1, h2, h3, h4, h5,
 
 /* Blocks */
 .intro-section {
+  font-size: 5rem;
   background-size: cover;
   position: relative; }
   .intro-section, .intro-section .container .row {
@@ -588,8 +589,12 @@ h1, h2, h3, h4, h5,
       .intro-section:before {
         width: 100%; } }
   .intro-section h1 {
-    font-size: 7rem;
+    
     font-weight: 900;
+    color: #fff; }
+    .intro-section h2 {
+    font-size: 5rem;
+    font-weight: 700;
     color: #fff; }
   .intro-section p {
     color: rgba(255, 255, 255, 0.5);
@@ -710,7 +715,7 @@ h1, h2, h3, h4, h5,
     flex: 0 0 90px; }
 
 .social-wrap a {
-  display: inline-block;
+ display: inline-block;
   width: 40px;
   height: 40px;
   background: #51be78;
@@ -890,8 +895,8 @@ h1, h2, h3, h4, h5,
 .person {
   margin-bottom: 50px !important; }
   .person img {
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     margin-top: -50px;
     border-radius: 50%;
     margin-left: auto;

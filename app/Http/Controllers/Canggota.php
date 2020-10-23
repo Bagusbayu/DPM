@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Manggota;
+use App\Mkomisi;
 
 class Canggota extends Controller
 {
@@ -32,7 +33,8 @@ class Canggota extends Controller
      */
     public function create()
     {
-        return view ('inputanggota');
+        $iya = Mkomisi::all();
+        return view ('inputanggota',compact('iya'));
     }
 
     /**

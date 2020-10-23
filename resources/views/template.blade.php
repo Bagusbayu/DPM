@@ -65,12 +65,19 @@
       <div class="container">
         
       <div class="d-flex align-items-center">
-          <div class="site-logo">
+          <!--<div class="site-logo">
             <a href="/index" class="d-block">
               <img src="assets/images/dpm144.png" alt="Image" class="img-fluid">
             </a>
-            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
-                class="icon-menu h3"></span></a>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+            <span class="icon-menu h3"></span></a>
+          </div>-->
+          <div class="site-logo">
+            <a href="/index" class="d-block">
+              <img src="assets/images/img1.png" alt="Image" class="img-fluid">
+            </a>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+            <span class="icon-menu h3"></span></a>
           </div>
 
           <div class="mr-auto">
@@ -90,7 +97,36 @@
                 <li>
                 <li><a href="/pemira_dpm" class="nav-link text-left">Pemira</a>
                 </li>
-                  <a href="/struktur_dpm" class="nav-link text-left">Profile Struktur Anggota</a>
+                <li class="has-children">
+                  <a href="#" class="nav-link text-left">Struktur Anggota</a>
+                  <ul class="dropdown">
+                    <li>
+                      <a href="#">Pimpinan Dewan dan Pengurus Harian</a>
+                    </li>
+                    <li class="has-children">
+                    <a href="/#">AKD</a>
+                      <ul class="dropdown">
+                          <li><a href="#">Komisi I</a></li>
+                          <li><a href="#">Komisi II</a></li>
+                          <li><a href="#">Komisi III</a></li>
+                          <li><a href="#">Komisi IV</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-children">
+                      <a href="#" class="nav-link text-left">Anggota Dewan</a>
+                      <ul class="dropdown">
+                            <li><a href="#">Jurusan Keperawatan</a></li>
+                            <li><a href="#">Jurusan Kebidanan</a></li>
+                            <li><a href="#">Jurusan TRR</a></li>
+                            <li><a href="#">Jurusan RNIK</a></li>
+                            <li><a href="#">Jurusan Keperawatan Gigi</a></li>
+                            <li><a href="#">Jurusan Analis Kesehatan</a></li>
+                            <li><a href="#">Jurusan Gizi</a></li>
+                            <li><a href="#">Jurusan Kesehatan Lingkungan</a></li>
+                        </ul>
+                    </li>
+                    
+                  </ul>
                 </li>
                 <li>
                   <a href="/kbm" class="nav-link text-left">KBM</a>
@@ -106,7 +142,7 @@
                     <li><a href="/advonews_dpm">AdvoNews</a></li>
                   </ul>
                 </li>
-              </ul>                                                                                                                                                                                                                                                                                          </ul>
+              </ul> 
             </nav>
 
           </div>
@@ -125,7 +161,35 @@
 
     
 
-
+    <div class="section-bg style-1" style="background-image: url('assets/images/IMG_12.JPG');">
+        <div class="container">
+        <div class="col-lg-5 ml-auto align-self-center">
+                    <h2 class="section-title-underline mb-5">
+                        <span></span>
+                    </h2>
+                    
+        </div>
+          <!--<div class="row">
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-mortarboard"></span>
+              <h3>Our Philosphy</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea? Dolore, amet reprehenderit.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <!--<span class="icon flaticon-school-material"></span>
+              <h3>Academics Principle</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+                Dolore, amet reprehenderit.</p> 
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+               <!--<span class="icon flaticon-library"></span>
+             <h3>Key of Success</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+                Dolore, amet reprehenderit.</p>
+            </div> 
+          </div>-->
+        </div>
+      </div> 
 
     
 

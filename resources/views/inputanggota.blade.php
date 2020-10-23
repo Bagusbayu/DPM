@@ -20,7 +20,13 @@
                 <div class = "form-group">
                     <label for = "jurusan">Input Jurusan </label>
                     <input type = "text" class = "form-control" id = "jurusan" placeholder = "Input Jurusan" name="jurusan">
-                </div>
+                    
+                     <select class = "form-control" id="cars" name="cars">
+                     @foreach($iya as $iyas)
+                      <option value="{{$iyas->komisi}}">{{$iyas->komisi}}</option>
+                      @endforeach
+                    </select>
+                    
                 <div class = "form-group">
                     <label for = "angkatan">Input Tahun Angkatan </label>
                     <input type = "text" class = "form-control" id = "angkatan" placeholder = "Input Tahun Angkatan" name="angkatan">

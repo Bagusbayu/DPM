@@ -19,6 +19,8 @@ class CreateManggotasTable extends Migration
             $table->text('jurusan');
             $table->text('angkatan');
             $table->text('jabatan');
+            $table->text('studi');
+            $table->text('ahli');
             $table->text('pict');
             $table->timestamps();
         });

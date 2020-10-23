@@ -40,6 +40,7 @@ class Caspirasi1 extends Controller
         $data->nim = $request->nim;
         $data->email = $request->email;
         $data->jurusan = $request->jurusan;
+        $data->prodi = $request->prodi;
         $data->angkatan = $request->angkatan;
         $data->message = $request->message;
         $data->save();

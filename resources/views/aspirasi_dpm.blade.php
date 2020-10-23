@@ -31,11 +31,16 @@
                     <label for="eaddress">Email</label>
                     <input type="text" id="email" class="form-control form-control-lg" name="email">
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="fname">Jurusan</label>
                     <input type="text" id="jurusan" class="form-control form-control-lg" name="jurusan">
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-6 form-group">
+                    <label for="eaddress">Program Studi</label>
+                    <input type="text" id="prodi" class="form-control form-control-lg" name="prodi">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="tel">Angkatan</label>
