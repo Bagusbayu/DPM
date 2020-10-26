@@ -14,9 +14,8 @@ class Cadvonews1 extends Controller
      */
     public function index()
     {
-        $data = Madvonews::orderBy('id','desc')->paginate(1);
-        $iya = Madvonews::orderBy('id','desc')->paginate(3);
-        return view ('advonews_dpm',compact('data','iya'));
+        $data = Madvonews::orderBy('id','desc')->paginate(10);
+        return view ('advonews_dpm',compact('data'));
     }
 
     /**

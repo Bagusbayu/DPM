@@ -8,6 +8,10 @@ use App\Madvonews;
 use App\Manggota;
 use App\MOrmawa;
 use App\Mpemira;
+use App\Maktivitas;
+use App\Mvmdpm;
+
+
 
 class Cindex extends Controller
 {
@@ -18,14 +22,16 @@ class Cindex extends Controller
      */
     public function index()
     {
-        $iya = Madvonews::orderBy('id','desc')->paginate(2);
+        $iya = Maktivitas::orderBy('id','desc')->paginate(3);
         $oke = Manggota::orderBy('id','asc')->paginate(3);
         $apa = MOrmawa::orderBy('id','desc')->paginate(6);
         $data = Mvmpoltekkes::all();
-        $bos = Madvonews::orderBy('id','desc')->paginate(1);
-        $war = Madvonews::orderBy('id','desc')->paginate(3);
-        $gas = Mpemira::orderBy('id','desc')->paginate(2);
-        return view ('index',compact('data','iya','oke','apa','bos','war','gas'));
+        $oi = Mvmdpm::all();
+        $bos = Maktivitas::orderBy('id','desc')->paginate(1);
+        $war = Maktivitas::orderBy('id','desc')->paginate(3);
+        $gas = Maktivitas::orderBy('id','desc')->paginate(2);
+        $war = Madvonews::orderBy('id','desc')->paginate(10);
+        return view ('index',compact('data','iya','oke','apa','bos','war','gas','oi'));
     }
 
     /**
