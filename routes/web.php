@@ -60,6 +60,9 @@ Route::resource('index','Cindex');
 Route::resource('vm_poltekes','Cvmpoltekkes1');
 
 Route::resource('vm_dm','Cvmdpm1');
+Route::post('/upload/proses', 'Cvmdpm1@store');
+Route::get('/photovmdpm','Cvmdpm1@upload');
+Route::get('/upload/hapus/{id}', 'Cvmdpm1@destroy');
 
 Route::resource('struktur_dpm','Canggota1');
 

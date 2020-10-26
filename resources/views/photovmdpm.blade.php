@@ -8,15 +8,21 @@
                 </div>
         @endif
            <hr>
-            <a type="button" class="btn btn-primary" href="{{url('inputvmdpm')}}">Input</a>
-            <a type="button" class="btn btn-primary" href="{{url('photovmdpm')}}">Input Photo</a>
+           <form role = "form" action="/upload/proses" method="post" enctype="multipart/form-data">
+                {{ csrf_field() }}
+            <div class = "form-group">
+                   <label for = "pict">File input</label>
+                   <input type = "file" id = "photo" name="photo">
+                </div>
+                <button type = "submit" class = "btn btn-default">Submit</button>
+                <a type="reset" class="btn btn-md btn-danger" href="{{url('photovmdpm')}}">Cancel</a>
+             </form>
             <br><br>
             <table class = "table">
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Visi</th>
-                    <th>Misi</th>
+                    <th>photo</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -25,15 +31,8 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{$no++}}</td>
-                        <td>{{$datas->visi}}</td>
-                        <td>{{$datas->misi}}</td>
-                        <td>
-                        <form action="{{ route('vmdpm.destroy', $datas->id) }}" method="post">
-                                <a href="{{ route('vmdpm.edit',$datas->id) }}" type="Button" class="btn btn-link"> Update</a>
-                             {{ csrf_field() }}
-                             {{ method_field('DELETE') }}
-                            <button class="btn btn-link" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>  
-                            </form>
+                        <td><img src="{{ url('uploads/file/'.$datas->photo) }}" style="width: 150px; height: 150px;"></td>
+                        <td><a class="btn btn-danger" href="/upload/hapus/{{ $datas->id }}">Delete</a>
                         </td>
                     </tr>
                 @endforeach

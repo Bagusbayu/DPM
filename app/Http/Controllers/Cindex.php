@@ -30,7 +30,7 @@ class Cindex extends Controller
         $bos = Maktivitas::orderBy('id','desc')->paginate(1);
         $war = Maktivitas::orderBy('id','desc')->paginate(3);
         $gas = Maktivitas::orderBy('id','desc')->paginate(2);
-        $war = Madvonews::orderBy('id','desc')->paginate(10);
+        $war = Madvonews::orderBy('id','desc')->paginate(3);
         return view ('index',compact('data','iya','oke','apa','bos','war','gas','oi'));
     }
 
