@@ -45,6 +45,10 @@
                     @endforeach
                 </tbody>
             </table>
+            <div class="text-center">
+                {!! $data->links(); !!}
+            </div>
+
             
         </div>
     </section>

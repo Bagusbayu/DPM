@@ -17,10 +17,11 @@ class CreateManggotasTable extends Migration
             $table->bigIncrements('id');
             $table->text('nama');
             $table->text('jurusan');
+            $table->text('prodi');
+            $table->text('bagian');
+            $table->text('struktur');
             $table->text('angkatan');
             $table->text('jabatan');
-            $table->text('studi');
-            $table->text('ahli');
             $table->text('pict');
             $table->timestamps();
         });

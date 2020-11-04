@@ -33,10 +33,10 @@ class Canggota extends Controller
      */
     public function create()
     {
-        $iya = Mkomisi::all();
-        return view ('inputanggota',compact('iya'));
+        return view ('inputanggota');
     }
-
+   
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -54,6 +54,9 @@ class Canggota extends Controller
         $data->jurusan = $request->jurusan;
         $data->angkatan = $request->angkatan;
         $data->jabatan = $request->jabatan;
+        $data->prodi = $request->prodi;
+        $data->bagian = $request->bagian;
+        $data->struktur = $request->struktur;
         $file = $request->file('pict');
         $ext = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$ext;
@@ -97,25 +100,31 @@ class Canggota extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
+        /*$this->validate($request, [
             'pict' => 'file|image|mimes:jpeg,png,jpg',
-        ]);
+        ]);*/
         //$data = Manggota::where('id',$id)->first();
         $data = Manggota::findOrFail($id);
         $data->nama = $request->nama;
-            $data->jurusan = $request->jurusan;
-            $data->angkatan = $request->angkatan;
-            $data->jabatan = $request->jabatan;
+        $data->jurusan = $request->jurusan;
+        $data->angkatan = $request->angkatan;
+        $data->jabatan = $request->jabatan;
+        $data->prodi = $request->prodi;
+        $data->bagian = $request->bagian;
+        $data->struktur = $request->struktur;
         if (empty($request->file('pict'))){
             $data->pict = $data->pict;
         }
         else{
             //$data = Manggota::where('id',$id)->first();
             unlink('uploads/file/'.$data->pict); //menghapus file lama
-            //$data->nama = $request->nama;
-            //$data->jurusan = $request->jurusan;
-            //$data->angkatan = $request->angkatan;
-            //$data->jabatan = $request->jabatan;
+           // $data->nama = $request->nama;
+           // $data->jurusan = $request->jurusan;
+          //  $data->angkatan = $request->angkatan;
+          //  $data->jabatan = $request->jabatan;
+          //  $data->prodi = $request->prodi;
+          //  $data->bagian = $request->bagian;
+          //  $data->struktur = $request->struktur;
             $file = $request->file('pict');
             $ext = $file->getClientOriginalExtension();
             $newName = rand(100000,1001238912).".".$ext;
@@ -138,4 +147,5 @@ class Canggota extends Controller
         $data->delete();
         return redirect()->route('vanggota.index')->with('alert-success','Data berhasil dihapus!');
     }
+
 }

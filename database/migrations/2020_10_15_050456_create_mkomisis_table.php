@@ -15,6 +15,8 @@ class CreateMkomisisTable extends Migration
     {
         Schema::create('komisi', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text('bagian');
+            $table->text('struktur');
             $table->text('jabatan');
             $table->timestamps();
         });

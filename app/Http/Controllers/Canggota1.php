@@ -14,7 +14,7 @@ class Canggota1 extends Controller
      */
     public function index()
     {
-        $data = Manggota::all();
+        $data = Manggota::where('jabatan','=','Deputi I')->orWhere('jabatan','=','Ketua Umum')->orWhere('jabatan','=','Deputi II')->orWhere('jabatan','=','Sekretaris Umum')->orWhere('jabatan','=','Staf Ahli Sekretaris Umum')->orWhere('jabatan','=','Bendahara Umum')->get();
         return view ('struktur_dpm',compact('data'));
     }
 

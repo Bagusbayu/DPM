@@ -101,7 +101,7 @@
                   <a href="#" class="nav-link text-left">Struktur Anggota</a>
                   <ul class="dropdown">
                     <li>
-                      <a href="#">Pimpinan Dewan dan Pengurus Harian</a>
+                      <a href="/struktur_dpm">Pimpinan Dewan dan Pengurus Harian</a>
                     </li>
                     <li class="has-children">
                     <a href="/#">AKD</a>
