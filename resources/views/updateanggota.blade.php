@@ -33,6 +33,10 @@
                     </select>
                 </div>
                 <div class = "form-group">
+                    <label for = "name">Input Prodi</label>
+                    <input type = "text" class = "form-control" id="prodi" placeholder = "Input Prodi" name="prodi" value="{{ $data->prodi }}">
+                </div>
+                <div class = "form-group">
                     <label for = "angkatan">Input Tahun Angkatan</label>
                     <input type = "text" class = "form-control" id = "angkatan" placeholder = "Input Tahun Angkatan" name = "angkatan" value="{{ $data->angkatan }}">
                 </div>

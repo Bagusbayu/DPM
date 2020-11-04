@@ -25,7 +25,8 @@ class Canggota1 extends Controller
      */
     public function create()
     {
-        //
+        $data = Manggota::where('struktur','=','Komisi I')->get();
+        return view ('komisiI',compact('data'));
     }
 
     /**
@@ -34,9 +35,10 @@ class Canggota1 extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $data = Manggota::where('struktur','=','Komisi II')->get();
+        return view ('komisiII',compact('data'));
     }
 
     /**
@@ -45,9 +47,10 @@ class Canggota1 extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $data = Manggota::where('struktur','=','Komisi III')->get();
+        return view ('komisiIII',compact('data'));
     }
 
     /**
@@ -56,9 +59,10 @@ class Canggota1 extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        $data = Manggota::where('struktur','=','Komisi IV')->get();
+        return view ('komisiIV',compact('data'));
     }
 
     /**
@@ -68,9 +72,10 @@ class Canggota1 extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update()
     {
-        //
+        $data = Manggota::where('jurusan','=','keperawatan')->get();
+        return view ('keperawatan',compact('data'));
     }
 
     /**
@@ -79,8 +84,39 @@ class Canggota1 extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        $data = Manggota::where('jurusan','=','kebidanan')->get();
+        return view ('kebidanan',compact('data'));
+    }
+    public function destro()
+    {
+        $data = Manggota::where('jurusan','=','trr')->get();
+        return view ('trr',compact('data'));
+    }
+    public function destr()
+    {
+        $data = Manggota::where('jurusan','=','rnik')->get();
+        return view ('rnik',compact('data'));
+    }
+    public function dest()
+    {
+        $data = Manggota::where('jurusan','=','keperawatan gigi')->get();
+        return view ('keperawatan gigi',compact('data'));
+    }
+    public function des()
+    {
+        $data = Manggota::where('jurusan','=','analis kesehatan')->get();
+        return view ('analis kesehatan',compact('data'));
+    }
+    public function de()
+    {
+        $data = Manggota::where('jurusan','=','gizi')->get();
+        return view ('gizi',compact('data'));
+    }
+    public function d()
+    {
+        $data = Manggota::where('jurusan','=','kesehatan lingkungan')->get();
+        return view ('kesehatan lingkungan',compact('data'));
     }
 }

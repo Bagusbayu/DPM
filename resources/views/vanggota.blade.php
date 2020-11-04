@@ -17,6 +17,7 @@
                     <th>No</th>
                     <th>Nama</th>
                     <th>Jurusan</th>
+                    <th>Prodi</th>
                     <th>Angkatan</th>
                     <th>Jabatan</th>
                     <th>Pict</th>
@@ -30,6 +31,7 @@
                         <td>{{$no++}}</td>
                         <td>{{$datas->nama}}</td>
                         <td>{{$datas->jurusan}}</td>
+                        <td>{{$datas->prodi}}</td>
                         <td>{{$datas->angkatan}}</td>
                         <td>{{$datas->jabatan}}</td>
                         <td><img src="{{ url('uploads/file/'.$datas->pict) }}" style="width: 150px; height: 150px;"></td>

@@ -66,6 +66,18 @@ Route::get('/photovmdpm','Cvmdpm1@upload');
 Route::get('/upload/hapus/{id}', 'Cvmdpm1@destroy');
 
 Route::resource('struktur_dpm','Canggota1');
+Route::get('struktur_dpm_komisi_I','Canggota1@create');
+Route::get('struktur_dpm_komisi_II','Canggota1@store');
+Route::get('struktur_dpm_komisi_III','Canggota1@show');
+Route::get('struktur_dpm_komisi_IV','Canggota1@edit');
+Route::get('struktur_dpm_keperawatan','Canggota1@update');
+Route::get('struktur_dpm_kebidanan','Canggota1@destroy');
+Route::get('struktur_dpm_trr','Canggota1@destro');
+Route::get('struktur_dpm_rnik','Canggota1@destr');
+Route::get('struktur_dpm_keperawatan_gigi','Canggota1@dest');
+Route::get('struktur_dpm_analis_kesehatan','Canggota1@des');
+Route::get('struktur_dpm_gizi','Canggota1@de');
+Route::get('struktur_dpm_kesehatan_lingkungan','Canggota1@d');
 
 //Route::resource('ormawa','Cormawa1');
 Route::resource('kbm','Cormawa1');

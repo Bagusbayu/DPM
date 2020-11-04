@@ -106,23 +106,23 @@
                     <li class="has-children">
                     <a href="/#">AKD</a>
                       <ul class="dropdown">
-                          <li><a href="#">Komisi I</a></li>
-                          <li><a href="#">Komisi II</a></li>
-                          <li><a href="#">Komisi III</a></li>
-                          <li><a href="#">Komisi IV</a></li>
+                          <li><a href="/struktur_dpm_komisi_I">Komisi I</a></li>
+                          <li><a href="/struktur_dpm_komisi_II">Komisi II</a></li>
+                          <li><a href="/struktur_dpm_komisi_III">Komisi III</a></li>
+                          <li><a href="/struktur_dpm_komisi_IV">Komisi IV</a></li>
                       </ul>
                     </li>
                     <li class="has-children">
                       <a href="#" class="nav-link text-left">Anggota Dewan</a>
                       <ul class="dropdown">
-                            <li><a href="#">Jurusan Keperawatan</a></li>
-                            <li><a href="#">Jurusan Kebidanan</a></li>
-                            <li><a href="#">Jurusan TRR</a></li>
-                            <li><a href="#">Jurusan RNIK</a></li>
-                            <li><a href="#">Jurusan Keperawatan Gigi</a></li>
-                            <li><a href="#">Jurusan Analis Kesehatan</a></li>
-                            <li><a href="#">Jurusan Gizi</a></li>
-                            <li><a href="#">Jurusan Kesehatan Lingkungan</a></li>
+                            <li><a href="/struktur_dpm_keperwatan">Jurusan Keperawatan</a></li>
+                            <li><a href="/struktur_dpm_kebidanan">Jurusan Kebidanan</a></li>
+                            <li><a href="/struktur_dpm_trr">Jurusan TRR</a></li>
+                            <li><a href="/struktur_dpm_rnik">Jurusan RNIK</a></li>
+                            <li><a href="/struktur_dpm_keperawatan_gigi">Jurusan Keperawatan Gigi</a></li>
+                            <li><a href="/struktur_dpm_analis_kesehatan">Jurusan Analis Kesehatan</a></li>
+                            <li><a href="/struktur_dpm_gizi">Jurusan Gizi</a></li>
+                            <li><a href="/struktur_dpm_kesehatan_lingkungan">Jurusan Kesehatan Lingkungan</a></li>
                         </ul>
                     </li>
                     
