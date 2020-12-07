@@ -60,6 +60,7 @@ class Canggota extends Controller
         $file = $request->file('pict');
         $ext = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$ext;
+        $file->resize(320, 240);
         $file->move('uploads/file',$newName);
         $data->pict = $newName;
         $data->save();

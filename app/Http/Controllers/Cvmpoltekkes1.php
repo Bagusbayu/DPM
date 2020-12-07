@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mvmpoltekkes;
+use App\Mcontact;
+use App\Mvisit;
 
 class Cvmpoltekkes1 extends Controller
 {
@@ -25,7 +27,8 @@ class Cvmpoltekkes1 extends Controller
      */
     public function create()
     {
-        //
+        $data = Mcontact::all();
+        return view ('vcontact',compact('data'));
     }
 
     /**
@@ -36,7 +39,10 @@ class Cvmpoltekkes1 extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Mcontact();
+        $data->contact = $request->contact;
+        $data->save();
+        return redirect()->back()->with('alert-success','Data berhasil ditambahkan!');
     }
 
     /**
@@ -45,9 +51,10 @@ class Cvmpoltekkes1 extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $data = Mvisit::all();
+        return view ('visit',compact('data'));
     }
 
     /**
@@ -56,9 +63,12 @@ class Cvmpoltekkes1 extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        $data = new Mvisit();
+        $data->visit = $request->visit;
+        $data->save();
+        return redirect()->back()->with('alert-success','Data berhasil ditambahkan!');
     }
 
     /**
@@ -68,9 +78,11 @@ class Cvmpoltekkes1 extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        $data = \App\Mvisit::findOrFail($id);
+        $data->delete();
+        return redirect()->back()->with('alert-success','Data berhasil dihapus!');
     }
 
     /**
@@ -81,6 +93,8 @@ class Cvmpoltekkes1 extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = \App\Mcontact::findOrFail($id);
+        $data->delete();
+        return redirect()->back()->with('alert-success','Data berhasil dihapus!');
     }
 }

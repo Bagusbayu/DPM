@@ -18,7 +18,8 @@ class Cvmdpm1 extends Controller
     public function index()
     {
         $data = Mvmdpm::all();
-        return view ('vm_dm',compact('data'));
+        $dat = Mpvmdpm::orderBy('id','desc')->paginate(1);
+        return view ('vm_dm',compact('data','dat'));
     }
 
     /**

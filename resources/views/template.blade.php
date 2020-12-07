@@ -29,6 +29,7 @@
 
 
 
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -61,8 +62,8 @@
       </div>
     </div> 
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
-
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
         
       <div class="d-flex align-items-center">
           <!--<div class="site-logo">
@@ -76,81 +77,92 @@
             <a href="/index" class="d-block">
               <img src="assets/images/img1.png" alt="Image" class="img-fluid">
             </a>
-            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
-            <span class="icon-menu h3"></span></a>
+            <!--<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+            <span class="icon-menu h3"></span></a>-->
           </div>
 
-          <div class="mr-auto">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block" style="padding-left: 0 ! important;">
-                <li class="active">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="mr-auto navbar-nav">
+            <nav class="site-navigation position-relative text-left" role="navigation">
+             <!-- class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block" style="padding-left: 0 ! important;">-->
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
                   <a href="/index" class="nav-link text-left">Beranda</a>
                 </li>
-                <li class="has-children">
-                  <a href="#" class="nav-link text-left">Visi Misi</a>
-                  <ul class="dropdown">
-                    <li><a href="/vm_poltekes">Visi Misi Poltekkes</a></li>
-                    <li><a href="/vm_dm">Visi Misi DPM</a></li>
+
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link text-left dropdown-toggledropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Visi Misi</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/vm_poltekes">Visi Misi Poltekkes</a></li>
+                    <li><a class="dropdown-item" href="/vm_dm">Visi Misi DPM</a></li>
                     
                   </ul>
                 </li>
-                <li>
+                
                 <li><a href="/pemira_dpm" class="nav-link text-left">Pemira</a>
                 </li>
-                <li class="has-children">
-                  <a href="#" class="nav-link text-left">Struktur Anggota</a>
-                  <ul class="dropdown">
+                
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link text-left dropdown-toggledropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Struktur Anggota</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                      <a href="/struktur_dpm">Pimpinan Dewan dan Pengurus Harian</a>
+                      <a href="/struktur_dpm" class="dropdown-item">Pimpinan Dewan dan Pengurus Harian</a>
                     </li>
-                    <li class="has-children">
+                    <li class="dropdown">
                     <a href="/#">AKD</a>
                       <ul class="dropdown">
-                          <li><a href="/struktur_dpm_komisi_I">Komisi I</a></li>
-                          <li><a href="/struktur_dpm_komisi_II">Komisi II</a></li>
-                          <li><a href="/struktur_dpm_komisi_III">Komisi III</a></li>
-                          <li><a href="/struktur_dpm_komisi_IV">Komisi IV</a></li>
+                          <li><a href="/struktur_dpm_komisi_I" class="dropdown-item">Komisi I</a></li>
+                          <li><a href="/struktur_dpm_komisi_II" class="dropdown-item">Komisi II</a></li>
+                          <li><a href="/struktur_dpm_komisi_III" class="dropdown-item">Komisi III</a></li>
+                          <li><a href="/struktur_dpm_komisi_IV" class="dropdown-item">Komisi IV</a></li>
                       </ul>
                     </li>
                     <li class="has-children">
                       <a href="#" class="nav-link text-left">Anggota Dewan</a>
                       <ul class="dropdown">
-                            <li><a href="/struktur_dpm_keperwatan">Jurusan Keperawatan</a></li>
-                            <li><a href="/struktur_dpm_kebidanan">Jurusan Kebidanan</a></li>
-                            <li><a href="/struktur_dpm_trr">Jurusan TRR</a></li>
-                            <li><a href="/struktur_dpm_rnik">Jurusan RNIK</a></li>
-                            <li><a href="/struktur_dpm_keperawatan_gigi">Jurusan Keperawatan Gigi</a></li>
-                            <li><a href="/struktur_dpm_analis_kesehatan">Jurusan Analis Kesehatan</a></li>
-                            <li><a href="/struktur_dpm_gizi">Jurusan Gizi</a></li>
-                            <li><a href="/struktur_dpm_kesehatan_lingkungan">Jurusan Kesehatan Lingkungan</a></li>
+                            <li><a href="/struktur_dpm_keperwatan" class="dropdown-item">Jurusan Keperawatan</a></li>
+                            <li><a href="/struktur_dpm_kebidanan" class="dropdown-item">Jurusan Kebidanan</a></li>
+                            <li><a href="/struktur_dpm_trr" class="dropdown-item">Jurusan TRR</a></li>
+                            <li><a href="/struktur_dpm_rnik" class="dropdown-item">Jurusan RNIK</a></li>
+                            <li><a href="/struktur_dpm_keperawatan_gigi" class="dropdown-item">Jurusan Keperawatan Gigi</a></li>
+                            <li><a href="/struktur_dpm_analis_kesehatan" class="dropdown-item">Jurusan Analis Kesehatan</a></li>
+                            <li><a href="/struktur_dpm_gizi" class="dropdown-item">Jurusan Gizi</a></li>
+                            <li><a href="/struktur_dpm_kesehatan_lingkungan" class="dropdown-item">Jurusan Kesehatan Lingkungan</a></li>
                         </ul>
                     </li>
                     
                   </ul>
                 </li>
+                
                 <li>
                   <a href="/kbm" class="nav-link text-left">KBM</a>
                 </li>
+                
                 <li>
                     <a href="/produk_hukum" class="nav-link text-left">Produk Hukum</a>
                 </li>
-                <li class="has-children">
-                    <a href="#" class="nav-link text-left">Aktifitas DPM</a>
-                    <ul class="dropdown">
-                    <li><a href="/aspirasi_dpm">Aspirasi</a></li>
-                    <li><a href="/aktivitas">Aktifitas DPM</a></li>
-                    <li><a href="/advonews_dpm">AdvoNews</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link text-left dropdown-toggledropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aktifitas DPM</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a href="/aspirasi_dpm" class="dropdown-item">Aspirasi</a></li>
+                    <li><a href="/aktivitas" class="dropdown-item">Aktifitas DPM</a></li>
+                    <li><a href="/advonews_dpm" class="dropdown-item">AdvoNews</a></li>
                   </ul>
                 </li>
+              
               </ul> 
             </nav>
 
           </div>
-          
+          </div>
          
-        </div>
-      </div>
-
+        </div>    
+      </div> 
+      </nav>
     </header>
 
     
@@ -285,7 +297,7 @@
   <script src="assets/js/jquery.fancybox.min.js"></script>
   <script src="assets/js/jquery.sticky.js"></script>
   <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
-
+  <script src="assets/js/bootstrap-dropdown.js"></script>
 
 
 

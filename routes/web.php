@@ -59,6 +59,12 @@ Route::resource('','Cindex');
 Route::resource('index','Cindex');
 
 Route::resource('vm_poltekes','Cvmpoltekkes1');
+Route::get('/vcontact','Cvmpoltekkes1@create');
+Route::post('/create/proses', 'Cvmpoltekkes1@store');
+Route::get('/create/hapus/{id}', 'Cvmpoltekkes1@destroy');
+Route::get('/visit','Cvmpoltekkes1@show');
+Route::post('/show/proses', 'Cvmpoltekkes1@edit');
+Route::get('/show/hapus/{id}', 'Cvmpoltekkes1@update');
 
 Route::resource('vm_dm','Cvmdpm1');
 Route::post('/upload/proses', 'Cvmdpm1@store');

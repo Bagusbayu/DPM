@@ -1,7 +1,8 @@
 @extends("template")
 @section('title','Visi Misi DPM')
 @section("content")
-<div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('assets/images/bg_1.jpg')">
+@foreach($dat as $datas)
+<div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('{{ url('uploads/file/'.$datas->photo) }}')">
         <div class="container">
           <div class="row align-items-end">
             <div class="col-lg-7">
@@ -11,7 +12,7 @@
           </div>
         </div>
       </div> 
-
+@endforeach
 
     <div class="site-section">
         <div class="container">

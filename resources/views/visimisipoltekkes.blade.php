@@ -9,6 +9,8 @@
         @endif
            <hr>
             <a type="button" class="btn btn-primary" href="{{url('inputvmpoltekkes')}}">Input</a>
+            <a type="button" class="btn btn-primary" href="{{url('vcontact')}}">Input Contact</a>
+            <a type="button" class="btn btn-primary" href="{{url('visit')}}">Input Visit</a>
             <br><br>
             <table class = "table">
                 <thead>
