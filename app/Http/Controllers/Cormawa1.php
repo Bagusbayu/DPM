@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\MOrmawa;
+use App\Mcontact;
+use App\Mvisit;
 
 class Cormawa1 extends Controller
 {
@@ -15,7 +17,9 @@ class Cormawa1 extends Controller
     public function index()
     {
         $data = MOrmawa::all();
-        return view ('ormawa',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('ormawa',compact('data','d','da'));
     }
 
     /**

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Maktivitas;
+use App\Mcontact;
+use App\Mvisit;
 
 class Caktivitas1 extends Controller
 {
@@ -16,7 +18,9 @@ class Caktivitas1 extends Controller
     {
         $data = Maktivitas::orderBy('id','desc')->paginate(2);
         //$iya = Madvonews::orderBy('id','desc')->paginate(3);
-        return view ('aktivitas_dpm',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('aktivitas_dpm',compact('data','d','da'));
     }
 
     /**

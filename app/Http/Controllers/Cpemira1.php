@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mpemira;
+use App\Mcontact;
+use App\Mvisit;
 
 class Cpemira1 extends Controller
 {
@@ -15,8 +17,10 @@ class Cpemira1 extends Controller
     public function index()
     {
         $data = Mpemira::all();
+        $d = Mcontact::all();
+        $da = Mvisit::all();
         //$iya = Mpemira::orderBy('id','desc')->paginate(3);
-        return view ('pemira_dpm',compact('data'));
+        return view ('pemira_dpm',compact('data','d','da'));
     }
 
     /**

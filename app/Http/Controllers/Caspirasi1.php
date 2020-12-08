@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\MAspirasi;
+use App\Mcontact;
+use App\Mvisit;
 
 class Caspirasi1 extends Controller
 {
@@ -14,7 +16,9 @@ class Caspirasi1 extends Controller
      */
     public function index()
     {
-        return view ('aspirasi_dpm');
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('aspirasi_dpm',compact('d','da'));
     }
 
     /**

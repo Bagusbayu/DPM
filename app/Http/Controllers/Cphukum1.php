@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mphukum;
+use App\Mcontact;
+use App\Mvisit;
 
 class Cphukum1 extends Controller
 {
@@ -15,7 +17,9 @@ class Cphukum1 extends Controller
     public function index()
     {
         $data = Mphukum::orderBy('id','desc')->paginate(1);
-        return view ('produk_hukum',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('produk_hukum',compact('data','d','da'));
     }
 
     /**

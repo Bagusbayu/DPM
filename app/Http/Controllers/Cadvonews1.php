@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Madvonews;
+use App\Mcontact;
+use App\Mvisit;
 
 class Cadvonews1 extends Controller
 {
@@ -15,7 +17,9 @@ class Cadvonews1 extends Controller
     public function index()
     {
         $data = Madvonews::orderBy('id','desc')->paginate(10);
-        return view ('advonews_dpm',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('advonews_dpm',compact('data','d','da'));
     }
 
     /**

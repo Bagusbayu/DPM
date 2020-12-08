@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Manggota;
+use App\Mcontact;
+use App\Mvisit;
 
 class Canggota1 extends Controller
 {
@@ -15,7 +17,10 @@ class Canggota1 extends Controller
     public function index()
     {
         $data = Manggota::where('jabatan','=','Deputi I')->orWhere('jabatan','=','Ketua Umum')->orWhere('jabatan','=','Deputi II')->orWhere('jabatan','=','Sekretaris Umum')->orWhere('jabatan','=','Staf Ahli Sekretaris Umum')->orWhere('jabatan','=','Bendahara Umum')->get();
-        return view ('struktur_dpm',compact('data'));
+
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('struktur_dpm',compact('data','d','da'));
     }
 
     /**
@@ -26,7 +31,9 @@ class Canggota1 extends Controller
     public function create()
     {
         $data = Manggota::where('struktur','=','Komisi I')->get();
-        return view ('komisiI',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('komisiI',compact('data','d','da'));
     }
 
     /**
@@ -38,7 +45,9 @@ class Canggota1 extends Controller
     public function store()
     {
         $data = Manggota::where('struktur','=','Komisi II')->get();
-        return view ('komisiII',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('komisiII',compact('data','d','da'));
     }
 
     /**
@@ -50,7 +59,9 @@ class Canggota1 extends Controller
     public function show()
     {
         $data = Manggota::where('struktur','=','Komisi III')->get();
-        return view ('komisiIII',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('komisiIII',compact('data','d','da'));
     }
 
     /**
@@ -62,7 +73,9 @@ class Canggota1 extends Controller
     public function edit()
     {
         $data = Manggota::where('struktur','=','Komisi IV')->get();
-        return view ('komisiIV',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('komisiIV',compact('data','d','da'));
     }
 
     /**
@@ -75,7 +88,9 @@ class Canggota1 extends Controller
     public function update()
     {
         $data = Manggota::where('jurusan','=','keperawatan')->get();
-        return view ('keperawatan',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('keperawatan',compact('data','d','da'));
     }
 
     /**
@@ -87,36 +102,50 @@ class Canggota1 extends Controller
     public function destroy()
     {
         $data = Manggota::where('jurusan','=','kebidanan')->get();
-        return view ('kebidanan',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('kebidanan',compact('data','d','da'));
     }
     public function destro()
     {
         $data = Manggota::where('jurusan','=','trr')->get();
-        return view ('trr',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('trr',compact('data','d','da'));
     }
     public function destr()
     {
         $data = Manggota::where('jurusan','=','rnik')->get();
-        return view ('rnik',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('rnik',compact('data','d','da'));
     }
     public function dest()
     {
         $data = Manggota::where('jurusan','=','keperawatan gigi')->get();
-        return view ('keperawatan gigi',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('keperawatan gigi',compact('data','d','da'));
     }
     public function des()
     {
         $data = Manggota::where('jurusan','=','analis kesehatan')->get();
-        return view ('analis kesehatan',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('analis kesehatan',compact('data','d','da'));
     }
     public function de()
     {
         $data = Manggota::where('jurusan','=','gizi')->get();
-        return view ('gizi',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('gizi',compact('data','d','da'));
     }
     public function d()
     {
         $data = Manggota::where('jurusan','=','kesehatan lingkungan')->get();
-        return view ('kesehatan lingkungan',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('kesehatan lingkungan',compact('data','d','da'));
     }
 }

@@ -17,7 +17,9 @@ class Cvmpoltekkes1 extends Controller
     public function index()
     {
         $data = Mvmpoltekkes::all();
-        return view ('vm_poltekes',compact('data'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('vm_poltekes',compact('data','d','da'));
     }
 
     /**

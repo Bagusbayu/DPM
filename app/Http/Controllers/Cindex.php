@@ -45,7 +45,9 @@ class Cindex extends Controller
      */
     public function create()
     {
-        
+        $dat = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('foot', compact('dat','da'));
     }
 
     /**

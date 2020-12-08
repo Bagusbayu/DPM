@@ -7,6 +7,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mvmdpm;
 use App\Mpvmdpm;
+use App\Mcontact;
+use App\Mvisit;
 
 class Cvmdpm1 extends Controller
 {
@@ -19,7 +21,9 @@ class Cvmdpm1 extends Controller
     {
         $data = Mvmdpm::all();
         $dat = Mpvmdpm::orderBy('id','desc')->paginate(1);
-        return view ('vm_dm',compact('data','dat'));
+        $d = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('vm_dm',compact('data','dat','d','da'));
     }
 
     /**
