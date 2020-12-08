@@ -57,6 +57,7 @@ Route::resource('vaspirasi','Caspirasi');
 
 Route::resource('','Cindex');
 Route::resource('index','Cindex');
+//Route::get('foot','Cindex@create');
 
 Route::resource('vm_poltekes','Cvmpoltekkes1');
 Route::get('/vcontact','Cvmpoltekkes1@create');
@@ -95,6 +96,7 @@ Route::resource('advonews_dpm','Cadvonews1');
 Route::resource('pemira_dpm','Cpemira1');
 
 Route::resource('aktivitas_dpm','Caktivitas1');
+
 //Route::get('/', function () {
 //    return view('index','Cindex');
 //});

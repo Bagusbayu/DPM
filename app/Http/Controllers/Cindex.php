@@ -10,6 +10,8 @@ use App\MOrmawa;
 use App\Mpemira;
 use App\Maktivitas;
 use App\Mvmdpm;
+use App\Mcontact;
+use App\Mvisit;
 
 
 
@@ -31,7 +33,9 @@ class Cindex extends Controller
         $war = Maktivitas::orderBy('id','desc')->paginate(3);
         $gas = Maktivitas::orderBy('id','desc')->paginate(2);
         $war = Madvonews::orderBy('id','desc')->paginate(3);
-        return view ('index',compact('data','iya','oke','apa','bos','war','gas','oi'));
+        $dat = Mcontact::all();
+        $da = Mvisit::all();
+        return view ('index',compact('data','iya','oke','apa','bos','war','gas','oi','dat','da'));
     }
 
     /**
@@ -41,8 +45,7 @@ class Cindex extends Controller
      */
     public function create()
     {
-        //$data = Mvmpoltekkes::all();
-        //return view ('vm_poltekkes',compact('data'));
+        
     }
 
     /**
